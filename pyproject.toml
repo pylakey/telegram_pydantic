@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "telegram_pydantic"
+dynamic = ["version"]
+description = "Set of telegram pydantic models"
+authors = [
+    { name = "pylakey", email = "pylakey@protonmail.com" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.9"
+homepage = "https://github.com/pylakey/telegram_pydantic"
+repository = "https://github.com/pylakey/telegram_pydantic"
+classifiers = [
+    "Framework :: AsyncIO",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pydantic>=2,<3",
+]
+
+[project.scripts]
+telegram_pydantic_compile = "telegram_pydantic_compiler.compiler:start"
+
+[project.urls]
+Source = "https://github.com/pylakey/telegram_pydantic"
+Homepage = "https://github.com/pylakey/telegram_pydantic"
+
+[tool.hatch.version]
+path = "telegram_pydantic/__init__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build]
+skip-excluded-dirs = true
+include = [
+    "telegram_pydantic",
+    "README.md",
+    "CHANGELOG.md",
+]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "**/__pycache__",
+    "**/*.py[cod]"
+]
+
+[tool.hatch.build.targets.wheel]
+only-packages = true
