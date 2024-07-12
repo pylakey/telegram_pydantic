@@ -26,7 +26,7 @@ class InputPeerNotifySettings(BaseModel):
 
     show_previews: typing.Optional[bool] = None
     silent: typing.Optional[bool] = None
-    mute_until: Datetime
+    mute_until: typing.Optional[Datetime] = None
     sound: typing.Optional["base.NotificationSound"] = None
     stories_muted: typing.Optional[bool] = None
     stories_hide_sender: typing.Optional[bool] = None

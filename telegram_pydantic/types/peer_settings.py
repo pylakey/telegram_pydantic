@@ -37,6 +37,6 @@ class PeerSettings(BaseModel):
     business_bot_can_reply: typing.Optional[bool] = None
     geo_distance: typing.Optional[int] = None
     request_chat_title: typing.Optional[str] = None
-    request_chat_date: Datetime
+    request_chat_date: typing.Optional[Datetime] = None
     business_bot_id: typing.Optional[int] = None
     business_bot_manage_url: typing.Optional[str] = None

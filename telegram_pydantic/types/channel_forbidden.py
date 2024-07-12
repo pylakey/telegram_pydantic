@@ -29,4 +29,4 @@ class ChannelForbidden(BaseModel):
     title: str
     broadcast: typing.Optional[bool] = None
     megagroup: typing.Optional[bool] = None
-    until_date: Datetime
+    until_date: typing.Optional[Datetime] = None

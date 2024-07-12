@@ -27,4 +27,4 @@ class UpdateReadMessagesContents(BaseModel):
     messages: list[int]
     pts: int
     pts_count: int
-    date: Datetime
+    date: typing.Optional[Datetime] = None

@@ -33,7 +33,7 @@ class SendMultiMedia(BaseModel):
     update_stickersets_order: typing.Optional[bool] = None
     invert_media: typing.Optional[bool] = None
     reply_to: typing.Optional["base.InputReplyTo"] = None
-    schedule_date: Datetime
+    schedule_date: typing.Optional[Datetime] = None
     send_as: typing.Optional["base.InputPeer"] = None
     quick_reply_shortcut: typing.Optional["base.InputQuickReplyShortcut"] = None
     effect: typing.Optional[int] = None

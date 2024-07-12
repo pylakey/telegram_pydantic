@@ -30,4 +30,4 @@ class ForumTopics(BaseModel):
     chats: list["base.Chat"]
     users: list["base.User"]
     pts: int
-    order_by_create_date: Datetime
+    order_by_create_date: typing.Optional[bool] = None

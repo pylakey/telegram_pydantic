@@ -41,7 +41,7 @@ class GroupCallParticipant(BaseModel):
         validation_alias=pydantic.AliasChoices('self', 'is_self')
     )
     video_joined: typing.Optional[bool] = None
-    active_date: Datetime
+    active_date: typing.Optional[Datetime] = None
     volume: typing.Optional[int] = None
     about: typing.Optional[str] = None
     raise_hand_rating: typing.Optional[int] = None

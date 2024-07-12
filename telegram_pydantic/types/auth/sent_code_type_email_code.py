@@ -29,4 +29,4 @@ class SentCodeTypeEmailCode(BaseModel):
     apple_signin_allowed: typing.Optional[bool] = None
     google_signin_allowed: typing.Optional[bool] = None
     reset_available_period: typing.Optional[int] = None
-    reset_pending_date: Datetime
+    reset_pending_date: typing.Optional[Datetime] = None

@@ -32,4 +32,4 @@ class CheckedGiftCode(BaseModel):
     from_id: typing.Optional["base.Peer"] = None
     giveaway_msg_id: typing.Optional[int] = None
     to_id: typing.Optional[int] = None
-    used_date: Datetime
+    used_date: typing.Optional[Datetime] = None

@@ -30,4 +30,4 @@ class PageRelatedArticle(BaseModel):
     description: typing.Optional[str] = None
     photo_id: typing.Optional[int] = None
     author: typing.Optional[str] = None
-    published_date: Datetime
+    published_date: typing.Optional[Datetime] = None

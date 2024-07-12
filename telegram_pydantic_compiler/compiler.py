@@ -308,15 +308,13 @@ def start(format: bool = False):
         if sorted_args:
             for i in sorted_args:
                 arg_name = i[0]
+                arg_type = i[1]
 
-                if (
+                if "int" in arg_type and (
                         re.search(r'(\b|_)(date|until|since)(\b|_)', arg_name)
                         or arg_name in ('expires', 'expires_at', 'was_online')
                 ):
-                    # Telethon backwards compatibility
-                    arg_type = "date"
-                else:
-                    arg_type = i[1]
+                    arg_type = arg_type.replace('int', 'date')
 
                 type_hint, is_optional = get_type_hint(arg_type)
 

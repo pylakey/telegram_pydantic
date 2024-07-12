@@ -37,7 +37,7 @@ class SendMedia(BaseModel):
     reply_to: typing.Optional["base.InputReplyTo"] = None
     reply_markup: typing.Optional["base.ReplyMarkup"] = None
     entities: typing.Optional[list["base.MessageEntity"]] = None
-    schedule_date: Datetime
+    schedule_date: typing.Optional[Datetime] = None
     send_as: typing.Optional["base.InputPeer"] = None
     quick_reply_shortcut: typing.Optional["base.InputQuickReplyShortcut"] = None
     effect: typing.Optional[int] = None

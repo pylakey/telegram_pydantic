@@ -30,8 +30,8 @@ class ChatInviteExported(BaseModel):
     revoked: typing.Optional[bool] = None
     permanent: typing.Optional[bool] = None
     request_needed: typing.Optional[bool] = None
-    start_date: Datetime
-    expire_date: Datetime
+    start_date: typing.Optional[Datetime] = None
+    expire_date: typing.Optional[Datetime] = None
     usage_limit: typing.Optional[int] = None
     usage: typing.Optional[int] = None
     requested: typing.Optional[int] = None

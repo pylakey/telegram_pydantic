@@ -28,5 +28,5 @@ class GetExportedChatInvites(BaseModel):
     admin_id: "base.InputUser"
     limit: int
     revoked: typing.Optional[bool] = None
-    offset_date: Datetime
+    offset_date: typing.Optional[Datetime] = None
     offset_link: typing.Optional[str] = None

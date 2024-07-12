@@ -32,4 +32,4 @@ class Poll(BaseModel):
     multiple_choice: typing.Optional[bool] = None
     quiz: typing.Optional[bool] = None
     close_period: typing.Optional[int] = None
-    close_date: Datetime
+    close_date: typing.Optional[Datetime] = None

@@ -24,4 +24,4 @@ class DraftMessageEmpty(BaseModel):
         alias='_'
     )
 
-    date: Datetime
+    date: typing.Optional[Datetime] = None

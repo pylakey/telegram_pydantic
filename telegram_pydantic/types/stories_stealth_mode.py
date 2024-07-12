@@ -24,5 +24,5 @@ class StoriesStealthMode(BaseModel):
         alias='_'
     )
 
-    active_until_date: Datetime
-    cooldown_until_date: Datetime
+    active_until_date: typing.Optional[Datetime] = None
+    cooldown_until_date: typing.Optional[Datetime] = None

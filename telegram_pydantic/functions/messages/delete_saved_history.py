@@ -26,5 +26,5 @@ class DeleteSavedHistory(BaseModel):
 
     peer: "base.InputPeer"
     max_id: int
-    min_date: Datetime
-    max_date: Datetime
+    min_date: typing.Optional[Datetime] = None
+    max_date: typing.Optional[Datetime] = None

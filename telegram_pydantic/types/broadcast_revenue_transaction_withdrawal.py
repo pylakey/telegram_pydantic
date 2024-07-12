@@ -29,5 +29,5 @@ class BroadcastRevenueTransactionWithdrawal(BaseModel):
     provider: str
     pending: typing.Optional[bool] = None
     failed: typing.Optional[bool] = None
-    transaction_date: Datetime
+    transaction_date: typing.Optional[Datetime] = None
     transaction_url: typing.Optional[str] = None

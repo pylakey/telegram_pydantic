@@ -31,4 +31,4 @@ class PhoneCallWaiting(BaseModel):
     participant_id: int
     protocol: "base.PhoneCallProtocol"
     video: typing.Optional[bool] = None
-    receive_date: Datetime
+    receive_date: typing.Optional[Datetime] = None

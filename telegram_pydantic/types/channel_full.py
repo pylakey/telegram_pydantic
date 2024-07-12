@@ -64,7 +64,7 @@ class ChannelFull(BaseModel):
     linked_chat_id: typing.Optional[int] = None
     location: typing.Optional["base.ChannelLocation"] = None
     slowmode_seconds: typing.Optional[int] = None
-    slowmode_next_send_date: Datetime
+    slowmode_next_send_date: typing.Optional[Datetime] = None
     stats_dc: typing.Optional[int] = None
     call: typing.Optional["base.InputGroupCall"] = None
     ttl_period: typing.Optional[int] = None

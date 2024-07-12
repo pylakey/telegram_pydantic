@@ -30,4 +30,4 @@ class UpdateServiceNotification(BaseModel):
     entities: list["base.MessageEntity"]
     popup: typing.Optional[bool] = None
     invert_media: typing.Optional[bool] = None
-    inbox_date: Datetime
+    inbox_date: typing.Optional[Datetime] = None

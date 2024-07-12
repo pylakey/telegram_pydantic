@@ -35,6 +35,6 @@ class ForwardMessages(BaseModel):
     drop_media_captions: typing.Optional[bool] = None
     noforwards: typing.Optional[bool] = None
     top_msg_id: typing.Optional[int] = None
-    schedule_date: Datetime
+    schedule_date: typing.Optional[Datetime] = None
     send_as: typing.Optional["base.InputPeer"] = None
     quick_reply_shortcut: typing.Optional["base.InputQuickReplyShortcut"] = None

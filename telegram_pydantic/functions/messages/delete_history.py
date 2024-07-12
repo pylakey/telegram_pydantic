@@ -28,5 +28,5 @@ class DeleteHistory(BaseModel):
     max_id: int
     just_clear: typing.Optional[bool] = None
     revoke: typing.Optional[bool] = None
-    min_date: Datetime
-    max_date: Datetime
+    min_date: typing.Optional[Datetime] = None
+    max_date: typing.Optional[Datetime] = None

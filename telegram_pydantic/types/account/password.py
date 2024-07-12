@@ -35,5 +35,5 @@ class Password(BaseModel):
     srp_id: typing.Optional[int] = None
     hint: typing.Optional[str] = None
     email_unconfirmed_pattern: typing.Optional[str] = None
-    pending_reset_date: Datetime
+    pending_reset_date: typing.Optional[Datetime] = None
     login_email_pattern: typing.Optional[str] = None

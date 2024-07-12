@@ -33,6 +33,6 @@ class SendInlineBotResult(BaseModel):
     clear_draft: typing.Optional[bool] = None
     hide_via: typing.Optional[bool] = None
     reply_to: typing.Optional["base.InputReplyTo"] = None
-    schedule_date: Datetime
+    schedule_date: typing.Optional[Datetime] = None
     send_as: typing.Optional["base.InputPeer"] = None
     quick_reply_shortcut: typing.Optional["base.InputQuickReplyShortcut"] = None

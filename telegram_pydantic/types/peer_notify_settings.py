@@ -26,7 +26,7 @@ class PeerNotifySettings(BaseModel):
 
     show_previews: typing.Optional[bool] = None
     silent: typing.Optional[bool] = None
-    mute_until: Datetime
+    mute_until: typing.Optional[Datetime] = None
     ios_sound: typing.Optional["base.NotificationSound"] = None
     android_sound: typing.Optional["base.NotificationSound"] = None
     other_sound: typing.Optional["base.NotificationSound"] = None

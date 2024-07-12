@@ -32,5 +32,5 @@ class EditMessage(BaseModel):
     media: typing.Optional["base.InputMedia"] = None
     reply_markup: typing.Optional["base.ReplyMarkup"] = None
     entities: typing.Optional[list["base.MessageEntity"]] = None
-    schedule_date: Datetime
+    schedule_date: typing.Optional[Datetime] = None
     quick_reply_shortcut_id: typing.Optional[int] = None

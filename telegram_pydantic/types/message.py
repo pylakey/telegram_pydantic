@@ -53,7 +53,7 @@ class Message(BaseModel):
     views: typing.Optional[int] = None
     forwards: typing.Optional[int] = None
     replies: typing.Optional["base.MessageReplies"] = None
-    edit_date: Datetime
+    edit_date: typing.Optional[Datetime] = None
     post_author: typing.Optional[str] = None
     grouped_id: typing.Optional[int] = None
     reactions: typing.Optional["base.MessageReactions"] = None

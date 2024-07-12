@@ -28,4 +28,4 @@ class MyBoost(BaseModel):
     date: Datetime
     expires: Datetime
     peer: typing.Optional["base.Peer"] = None
-    cooldown_until_date: Datetime
+    cooldown_until_date: typing.Optional[Datetime] = None

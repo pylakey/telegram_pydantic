@@ -37,7 +37,7 @@ class StickerSet(BaseModel):
     text_color: typing.Optional[bool] = None
     channel_emoji_status: typing.Optional[bool] = None
     creator: typing.Optional[bool] = None
-    installed_date: Datetime
+    installed_date: typing.Optional[Datetime] = None
     thumbs: typing.Optional[list["base.PhotoSize"]] = None
     thumb_dc_id: typing.Optional[int] = None
     thumb_version: typing.Optional[int] = None

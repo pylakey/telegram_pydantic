@@ -27,6 +27,6 @@ class GiveawayInfo(BaseModel):
     start_date: Datetime
     participating: typing.Optional[bool] = None
     preparing_results: typing.Optional[bool] = None
-    joined_too_early_date: Datetime
+    joined_too_early_date: typing.Optional[Datetime] = None
     admin_disallowed_chat_id: typing.Optional[int] = None
     disallowed_country: typing.Optional[str] = None

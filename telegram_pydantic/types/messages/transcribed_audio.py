@@ -28,4 +28,4 @@ class TranscribedAudio(BaseModel):
     text: str
     pending: typing.Optional[bool] = None
     trial_remains_num: typing.Optional[int] = None
-    trial_remains_until_date: Datetime
+    trial_remains_until_date: typing.Optional[Datetime] = None

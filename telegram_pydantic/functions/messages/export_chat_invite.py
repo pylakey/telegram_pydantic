@@ -27,6 +27,6 @@ class ExportChatInvite(BaseModel):
     peer: "base.InputPeer"
     legacy_revoke_permanent: typing.Optional[bool] = None
     request_needed: typing.Optional[bool] = None
-    expire_date: Datetime
+    expire_date: typing.Optional[Datetime] = None
     usage_limit: typing.Optional[int] = None
     title: typing.Optional[str] = None

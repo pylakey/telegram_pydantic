@@ -31,7 +31,7 @@ class GroupCall(BaseModel):
     version: int
     join_muted: typing.Optional[bool] = None
     can_change_join_muted: typing.Optional[bool] = None
-    join_date_asc: Datetime
+    join_date_asc: typing.Optional[bool] = None
     schedule_start_subscribed: typing.Optional[bool] = None
     can_start_video: typing.Optional[bool] = None
     record_video_active: typing.Optional[bool] = None
@@ -39,6 +39,6 @@ class GroupCall(BaseModel):
     listeners_hidden: typing.Optional[bool] = None
     title: typing.Optional[str] = None
     stream_dc_id: typing.Optional[int] = None
-    record_start_date: Datetime
-    schedule_date: Datetime
+    record_start_date: typing.Optional[Datetime] = None
+    schedule_date: typing.Optional[Datetime] = None
     unmuted_video_count: typing.Optional[int] = None

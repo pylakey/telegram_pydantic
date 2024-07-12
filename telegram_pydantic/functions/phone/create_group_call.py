@@ -28,4 +28,4 @@ class CreateGroupCall(BaseModel):
     random_id: int
     rtmp_stream: typing.Optional[bool] = None
     title: typing.Optional[str] = None
-    schedule_date: Datetime
+    schedule_date: typing.Optional[Datetime] = None

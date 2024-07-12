@@ -27,7 +27,7 @@ class EditExportedChatInvite(BaseModel):
     peer: "base.InputPeer"
     link: str
     revoked: typing.Optional[bool] = None
-    expire_date: Datetime
+    expire_date: typing.Optional[Datetime] = None
     usage_limit: typing.Optional[int] = None
     request_needed: typing.Optional[bool] = None
     title: typing.Optional[str] = None

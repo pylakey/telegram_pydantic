@@ -35,5 +35,5 @@ class MessageFwdHeader(BaseModel):
     saved_from_msg_id: typing.Optional[int] = None
     saved_from_id: typing.Optional["base.Peer"] = None
     saved_from_name: typing.Optional[str] = None
-    saved_date: Datetime
+    saved_date: typing.Optional[Datetime] = None
     psa_type: typing.Optional[str] = None

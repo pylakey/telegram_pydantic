@@ -26,6 +26,6 @@ class UpdateNewAuthorization(BaseModel):
 
     hash: int
     unconfirmed: typing.Optional[bool] = None
-    date: Datetime
+    date: typing.Optional[Datetime] = None
     device: typing.Optional[str] = None
     location: typing.Optional[str] = None
