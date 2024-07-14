@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # SecurePlainData - Layer 181
 SecurePlainData = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.SecurePlainEmail, pydantic.Tag('SecurePlainEmail')],
-        typing.Annotated[types.SecurePlainPhone, pydantic.Tag('SecurePlainPhone')]
+        typing.Annotated[
+            types.SecurePlainEmail,
+            pydantic.Tag('SecurePlainEmail')        ],
+        typing.Annotated[
+            types.SecurePlainPhone,
+            pydantic.Tag('SecurePlainPhone')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

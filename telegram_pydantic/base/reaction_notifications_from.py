@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # ReactionNotificationsFrom - Layer 181
 ReactionNotificationsFrom = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.ReactionNotificationsFromAll, pydantic.Tag('ReactionNotificationsFromAll')],
-        typing.Annotated[types.ReactionNotificationsFromContacts, pydantic.Tag('ReactionNotificationsFromContacts')]
+        typing.Annotated[
+            types.ReactionNotificationsFromAll,
+            pydantic.Tag('ReactionNotificationsFromAll')        ],
+        typing.Annotated[
+            types.ReactionNotificationsFromContacts,
+            pydantic.Tag('ReactionNotificationsFromContacts')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

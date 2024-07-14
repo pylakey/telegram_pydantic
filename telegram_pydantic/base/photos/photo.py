@@ -10,5 +10,9 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 Photo = typing.Union[
-    typing.Annotated[types.photos.Photo, pydantic.Tag('photos.Photo')]
+    typing.Annotated[
+            types.photos.Photo,
+            pydantic.Tag('photos.Photo'),
+            pydantic.Tag('Photo')
+        ]
 ]

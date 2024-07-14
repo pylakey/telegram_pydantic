@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # messages.SentEncryptedMessage - Layer 181
 SentEncryptedMessage = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.messages.SentEncryptedFile, pydantic.Tag('messages.SentEncryptedFile')],
-        typing.Annotated[types.messages.SentEncryptedMessage, pydantic.Tag('messages.SentEncryptedMessage')]
+        typing.Annotated[
+            types.messages.SentEncryptedFile,
+            pydantic.Tag('messages.SentEncryptedFile'),
+            pydantic.Tag('SentEncryptedFile')
+        ],
+        typing.Annotated[
+            types.messages.SentEncryptedMessage,
+            pydantic.Tag('messages.SentEncryptedMessage'),
+            pydantic.Tag('SentEncryptedMessage')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

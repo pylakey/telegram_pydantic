@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # auth.SentCode - Layer 181
 SentCode = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.auth.SentCode, pydantic.Tag('auth.SentCode')],
-        typing.Annotated[types.auth.SentCodeSuccess, pydantic.Tag('auth.SentCodeSuccess')]
+        typing.Annotated[
+            types.auth.SentCode,
+            pydantic.Tag('auth.SentCode'),
+            pydantic.Tag('SentCode')
+        ],
+        typing.Annotated[
+            types.auth.SentCodeSuccess,
+            pydantic.Tag('auth.SentCodeSuccess'),
+            pydantic.Tag('SentCodeSuccess')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

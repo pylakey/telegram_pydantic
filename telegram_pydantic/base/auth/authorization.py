@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # auth.Authorization - Layer 181
 Authorization = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.auth.Authorization, pydantic.Tag('auth.Authorization')],
-        typing.Annotated[types.auth.AuthorizationSignUpRequired, pydantic.Tag('auth.AuthorizationSignUpRequired')]
+        typing.Annotated[
+            types.auth.Authorization,
+            pydantic.Tag('auth.Authorization'),
+            pydantic.Tag('Authorization')
+        ],
+        typing.Annotated[
+            types.auth.AuthorizationSignUpRequired,
+            pydantic.Tag('auth.AuthorizationSignUpRequired'),
+            pydantic.Tag('AuthorizationSignUpRequired')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

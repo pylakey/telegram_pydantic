@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # help.AppUpdate - Layer 181
 AppUpdate = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.help.AppUpdate, pydantic.Tag('help.AppUpdate')],
-        typing.Annotated[types.help.NoAppUpdate, pydantic.Tag('help.NoAppUpdate')]
+        typing.Annotated[
+            types.help.AppUpdate,
+            pydantic.Tag('help.AppUpdate'),
+            pydantic.Tag('AppUpdate')
+        ],
+        typing.Annotated[
+            types.help.NoAppUpdate,
+            pydantic.Tag('help.NoAppUpdate'),
+            pydantic.Tag('NoAppUpdate')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

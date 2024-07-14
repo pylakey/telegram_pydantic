@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # messages.Reactions - Layer 181
 Reactions = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.messages.Reactions, pydantic.Tag('messages.Reactions')],
-        typing.Annotated[types.messages.ReactionsNotModified, pydantic.Tag('messages.ReactionsNotModified')]
+        typing.Annotated[
+            types.messages.Reactions,
+            pydantic.Tag('messages.Reactions'),
+            pydantic.Tag('Reactions')
+        ],
+        typing.Annotated[
+            types.messages.ReactionsNotModified,
+            pydantic.Tag('messages.ReactionsNotModified'),
+            pydantic.Tag('ReactionsNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

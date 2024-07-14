@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # InputDialogPeer - Layer 181
 InputDialogPeer = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.InputDialogPeer, pydantic.Tag('InputDialogPeer')],
-        typing.Annotated[types.InputDialogPeerFolder, pydantic.Tag('InputDialogPeerFolder')]
+        typing.Annotated[
+            types.InputDialogPeer,
+            pydantic.Tag('InputDialogPeer')        ],
+        typing.Annotated[
+            types.InputDialogPeerFolder,
+            pydantic.Tag('InputDialogPeerFolder')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

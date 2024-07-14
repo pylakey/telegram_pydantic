@@ -10,5 +10,7 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 PostAddress = typing.Union[
-    typing.Annotated[types.PostAddress, pydantic.Tag('PostAddress')]
+    typing.Annotated[
+            types.PostAddress,
+            pydantic.Tag('PostAddress')        ]
 ]

@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # photos.Photos - Layer 181
 Photos = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.photos.Photos, pydantic.Tag('photos.Photos')],
-        typing.Annotated[types.photos.PhotosSlice, pydantic.Tag('photos.PhotosSlice')]
+        typing.Annotated[
+            types.photos.Photos,
+            pydantic.Tag('photos.Photos'),
+            pydantic.Tag('Photos')
+        ],
+        typing.Annotated[
+            types.photos.PhotosSlice,
+            pydantic.Tag('photos.PhotosSlice'),
+            pydantic.Tag('PhotosSlice')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

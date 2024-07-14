@@ -10,5 +10,7 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 TextWithEntities = typing.Union[
-    typing.Annotated[types.TextWithEntities, pydantic.Tag('TextWithEntities')]
+    typing.Annotated[
+            types.TextWithEntities,
+            pydantic.Tag('TextWithEntities')        ]
 ]

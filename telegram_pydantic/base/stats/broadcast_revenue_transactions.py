@@ -10,5 +10,9 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 BroadcastRevenueTransactions = typing.Union[
-    typing.Annotated[types.stats.BroadcastRevenueTransactions, pydantic.Tag('stats.BroadcastRevenueTransactions')]
+    typing.Annotated[
+            types.stats.BroadcastRevenueTransactions,
+            pydantic.Tag('stats.BroadcastRevenueTransactions'),
+            pydantic.Tag('BroadcastRevenueTransactions')
+        ]
 ]

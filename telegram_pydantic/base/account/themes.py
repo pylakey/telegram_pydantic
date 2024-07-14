@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # account.Themes - Layer 181
 Themes = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.account.Themes, pydantic.Tag('account.Themes')],
-        typing.Annotated[types.account.ThemesNotModified, pydantic.Tag('account.ThemesNotModified')]
+        typing.Annotated[
+            types.account.Themes,
+            pydantic.Tag('account.Themes'),
+            pydantic.Tag('Themes')
+        ],
+        typing.Annotated[
+            types.account.ThemesNotModified,
+            pydantic.Tag('account.ThemesNotModified'),
+            pydantic.Tag('ThemesNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

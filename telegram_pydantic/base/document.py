@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # Document - Layer 181
 Document = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.Document, pydantic.Tag('Document')],
-        typing.Annotated[types.DocumentEmpty, pydantic.Tag('DocumentEmpty')]
+        typing.Annotated[
+            types.Document,
+            pydantic.Tag('Document')        ],
+        typing.Annotated[
+            types.DocumentEmpty,
+            pydantic.Tag('DocumentEmpty')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

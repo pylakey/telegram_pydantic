@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # account.SavedRingtone - Layer 181
 SavedRingtone = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.account.SavedRingtone, pydantic.Tag('account.SavedRingtone')],
-        typing.Annotated[types.account.SavedRingtoneConverted, pydantic.Tag('account.SavedRingtoneConverted')]
+        typing.Annotated[
+            types.account.SavedRingtone,
+            pydantic.Tag('account.SavedRingtone'),
+            pydantic.Tag('SavedRingtone')
+        ],
+        typing.Annotated[
+            types.account.SavedRingtoneConverted,
+            pydantic.Tag('account.SavedRingtoneConverted'),
+            pydantic.Tag('SavedRingtoneConverted')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

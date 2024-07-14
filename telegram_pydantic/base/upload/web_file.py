@@ -10,5 +10,9 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 WebFile = typing.Union[
-    typing.Annotated[types.upload.WebFile, pydantic.Tag('upload.WebFile')]
+    typing.Annotated[
+            types.upload.WebFile,
+            pydantic.Tag('upload.WebFile'),
+            pydantic.Tag('WebFile')
+        ]
 ]

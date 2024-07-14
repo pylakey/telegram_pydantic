@@ -10,5 +10,9 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 ExportedChatInvites = typing.Union[
-    typing.Annotated[types.messages.ExportedChatInvites, pydantic.Tag('messages.ExportedChatInvites')]
+    typing.Annotated[
+            types.messages.ExportedChatInvites,
+            pydantic.Tag('messages.ExportedChatInvites'),
+            pydantic.Tag('ExportedChatInvites')
+        ]
 ]

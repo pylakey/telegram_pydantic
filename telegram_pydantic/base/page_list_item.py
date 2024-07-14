@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # PageListItem - Layer 181
 PageListItem = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.PageListItemBlocks, pydantic.Tag('PageListItemBlocks')],
-        typing.Annotated[types.PageListItemText, pydantic.Tag('PageListItemText')]
+        typing.Annotated[
+            types.PageListItemBlocks,
+            pydantic.Tag('PageListItemBlocks')        ],
+        typing.Annotated[
+            types.PageListItemText,
+            pydantic.Tag('PageListItemText')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

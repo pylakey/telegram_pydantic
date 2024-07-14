@@ -10,5 +10,9 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 ArchivedStickers = typing.Union[
-    typing.Annotated[types.messages.ArchivedStickers, pydantic.Tag('messages.ArchivedStickers')]
+    typing.Annotated[
+            types.messages.ArchivedStickers,
+            pydantic.Tag('messages.ArchivedStickers'),
+            pydantic.Tag('ArchivedStickers')
+        ]
 ]

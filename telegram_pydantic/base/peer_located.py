@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # PeerLocated - Layer 181
 PeerLocated = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.PeerLocated, pydantic.Tag('PeerLocated')],
-        typing.Annotated[types.PeerSelfLocated, pydantic.Tag('PeerSelfLocated')]
+        typing.Annotated[
+            types.PeerLocated,
+            pydantic.Tag('PeerLocated')        ],
+        typing.Annotated[
+            types.PeerSelfLocated,
+            pydantic.Tag('PeerSelfLocated')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

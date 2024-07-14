@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # help.PassportConfig - Layer 181
 PassportConfig = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.help.PassportConfig, pydantic.Tag('help.PassportConfig')],
-        typing.Annotated[types.help.PassportConfigNotModified, pydantic.Tag('help.PassportConfigNotModified')]
+        typing.Annotated[
+            types.help.PassportConfig,
+            pydantic.Tag('help.PassportConfig'),
+            pydantic.Tag('PassportConfig')
+        ],
+        typing.Annotated[
+            types.help.PassportConfigNotModified,
+            pydantic.Tag('help.PassportConfigNotModified'),
+            pydantic.Tag('PassportConfigNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

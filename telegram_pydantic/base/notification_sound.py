@@ -10,10 +10,18 @@ from telegram_pydantic.utils import base_type_discriminator
 # NotificationSound - Layer 181
 NotificationSound = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.NotificationSoundDefault, pydantic.Tag('NotificationSoundDefault')],
-        typing.Annotated[types.NotificationSoundLocal, pydantic.Tag('NotificationSoundLocal')],
-        typing.Annotated[types.NotificationSoundNone, pydantic.Tag('NotificationSoundNone')],
-        typing.Annotated[types.NotificationSoundRingtone, pydantic.Tag('NotificationSoundRingtone')]
+        typing.Annotated[
+            types.NotificationSoundDefault,
+            pydantic.Tag('NotificationSoundDefault')        ],
+        typing.Annotated[
+            types.NotificationSoundLocal,
+            pydantic.Tag('NotificationSoundLocal')        ],
+        typing.Annotated[
+            types.NotificationSoundNone,
+            pydantic.Tag('NotificationSoundNone')        ],
+        typing.Annotated[
+            types.NotificationSoundRingtone,
+            pydantic.Tag('NotificationSoundRingtone')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

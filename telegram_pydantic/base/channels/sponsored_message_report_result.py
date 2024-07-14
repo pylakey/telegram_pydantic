@@ -10,9 +10,21 @@ from telegram_pydantic.utils import base_type_discriminator
 # channels.SponsoredMessageReportResult - Layer 181
 SponsoredMessageReportResult = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.channels.SponsoredMessageReportResultAdsHidden, pydantic.Tag('channels.SponsoredMessageReportResultAdsHidden')],
-        typing.Annotated[types.channels.SponsoredMessageReportResultChooseOption, pydantic.Tag('channels.SponsoredMessageReportResultChooseOption')],
-        typing.Annotated[types.channels.SponsoredMessageReportResultReported, pydantic.Tag('channels.SponsoredMessageReportResultReported')]
+        typing.Annotated[
+            types.channels.SponsoredMessageReportResultAdsHidden,
+            pydantic.Tag('channels.SponsoredMessageReportResultAdsHidden'),
+            pydantic.Tag('SponsoredMessageReportResultAdsHidden')
+        ],
+        typing.Annotated[
+            types.channels.SponsoredMessageReportResultChooseOption,
+            pydantic.Tag('channels.SponsoredMessageReportResultChooseOption'),
+            pydantic.Tag('SponsoredMessageReportResultChooseOption')
+        ],
+        typing.Annotated[
+            types.channels.SponsoredMessageReportResultReported,
+            pydantic.Tag('channels.SponsoredMessageReportResultReported'),
+            pydantic.Tag('SponsoredMessageReportResultReported')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

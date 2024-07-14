@@ -10,5 +10,9 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 DialogFilters = typing.Union[
-    typing.Annotated[types.messages.DialogFilters, pydantic.Tag('messages.DialogFilters')]
+    typing.Annotated[
+            types.messages.DialogFilters,
+            pydantic.Tag('messages.DialogFilters'),
+            pydantic.Tag('DialogFilters')
+        ]
 ]

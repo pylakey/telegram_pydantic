@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # messages.SavedGifs - Layer 181
 SavedGifs = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.messages.SavedGifs, pydantic.Tag('messages.SavedGifs')],
-        typing.Annotated[types.messages.SavedGifsNotModified, pydantic.Tag('messages.SavedGifsNotModified')]
+        typing.Annotated[
+            types.messages.SavedGifs,
+            pydantic.Tag('messages.SavedGifs'),
+            pydantic.Tag('SavedGifs')
+        ],
+        typing.Annotated[
+            types.messages.SavedGifsNotModified,
+            pydantic.Tag('messages.SavedGifsNotModified'),
+            pydantic.Tag('SavedGifsNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

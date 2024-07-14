@@ -10,9 +10,15 @@ from telegram_pydantic.utils import base_type_discriminator
 # ChatReactions - Layer 181
 ChatReactions = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.ChatReactionsAll, pydantic.Tag('ChatReactionsAll')],
-        typing.Annotated[types.ChatReactionsNone, pydantic.Tag('ChatReactionsNone')],
-        typing.Annotated[types.ChatReactionsSome, pydantic.Tag('ChatReactionsSome')]
+        typing.Annotated[
+            types.ChatReactionsAll,
+            pydantic.Tag('ChatReactionsAll')        ],
+        typing.Annotated[
+            types.ChatReactionsNone,
+            pydantic.Tag('ChatReactionsNone')        ],
+        typing.Annotated[
+            types.ChatReactionsSome,
+            pydantic.Tag('ChatReactionsSome')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -10,5 +10,7 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 MessageReplies = typing.Union[
-    typing.Annotated[types.MessageReplies, pydantic.Tag('MessageReplies')]
+    typing.Annotated[
+            types.MessageReplies,
+            pydantic.Tag('MessageReplies')        ]
 ]

@@ -288,15 +288,28 @@ def start(format: bool = False):
             tmpl = base_type_tmpl
 
         with open(dir_path / f"{snake(module)}.py", "w") as f:
+            types = []
+
+            for c in constructors:
+                i = " " * 12
+                t = (
+                    f"typing.Annotated[\n"
+                    f"{i}types.{c},\n"
+                    f"{i}pydantic.Tag('{c}')"
+                )
+                only_name = c.split(".")[-1]
+
+                if only_name != c:
+                    t += f",\n{i}pydantic.Tag('{only_name}')\n"
+
+                t += f"{' ' * 8}]"
+                types.append(t)
+
             f.write(
                 tmpl.format(
                     name=type,
                     qualname=qualtype,
-                    types=",\n        ".join([
-                        f"typing.Annotated[types.{c}, pydantic.Tag('{c}')]"
-                        # f"types.{c}"
-                        for c in constructors
-                    ]),
+                    types=",\n        ".join(types),
                     layer=layer
                 )
             )
@@ -321,12 +334,13 @@ def start(format: bool = False):
                 if arg_name in arg_aliases:
                     aliases = arg_aliases[arg_name]
                     aliases_string = ", ".join([f"'{a}'" for a in aliases])
+                    i = " " * 8
                     default = (
                         f" = pydantic.Field(\n"
-                        f"        {'None' if is_optional else '...'},\n"
-                        f"        serialization_alias='{arg_name}',\n"
-                        f"        validation_alias=pydantic.AliasChoices('{arg_name}', {aliases_string})\n"
-                        f"    )"
+                        f"{i}{'None' if is_optional else '...'},\n"
+                        f"{i}serialization_alias='{arg_name}',\n"
+                        f"{i}validation_alias=pydantic.AliasChoices('{arg_name}', {aliases_string})\n"
+                        f"{' ' * 4})"
                     )
                     arg_name = aliases[0]
 

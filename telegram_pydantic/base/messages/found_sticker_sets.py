@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # messages.FoundStickerSets - Layer 181
 FoundStickerSets = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.messages.FoundStickerSets, pydantic.Tag('messages.FoundStickerSets')],
-        typing.Annotated[types.messages.FoundStickerSetsNotModified, pydantic.Tag('messages.FoundStickerSetsNotModified')]
+        typing.Annotated[
+            types.messages.FoundStickerSets,
+            pydantic.Tag('messages.FoundStickerSets'),
+            pydantic.Tag('FoundStickerSets')
+        ],
+        typing.Annotated[
+            types.messages.FoundStickerSetsNotModified,
+            pydantic.Tag('messages.FoundStickerSetsNotModified'),
+            pydantic.Tag('FoundStickerSetsNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

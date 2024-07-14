@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # WebDocument - Layer 181
 WebDocument = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.WebDocument, pydantic.Tag('WebDocument')],
-        typing.Annotated[types.WebDocumentNoProxy, pydantic.Tag('WebDocumentNoProxy')]
+        typing.Annotated[
+            types.WebDocument,
+            pydantic.Tag('WebDocument')        ],
+        typing.Annotated[
+            types.WebDocumentNoProxy,
+            pydantic.Tag('WebDocumentNoProxy')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

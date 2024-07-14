@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # messages.QuickReplies - Layer 181
 QuickReplies = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.messages.QuickReplies, pydantic.Tag('messages.QuickReplies')],
-        typing.Annotated[types.messages.QuickRepliesNotModified, pydantic.Tag('messages.QuickRepliesNotModified')]
+        typing.Annotated[
+            types.messages.QuickReplies,
+            pydantic.Tag('messages.QuickReplies'),
+            pydantic.Tag('QuickReplies')
+        ],
+        typing.Annotated[
+            types.messages.QuickRepliesNotModified,
+            pydantic.Tag('messages.QuickRepliesNotModified'),
+            pydantic.Tag('QuickRepliesNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

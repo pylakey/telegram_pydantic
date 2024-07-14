@@ -10,5 +10,9 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 HistoryImport = typing.Union[
-    typing.Annotated[types.messages.HistoryImport, pydantic.Tag('messages.HistoryImport')]
+    typing.Annotated[
+            types.messages.HistoryImport,
+            pydantic.Tag('messages.HistoryImport'),
+            pydantic.Tag('HistoryImport')
+        ]
 ]

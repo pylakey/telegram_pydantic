@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # MessageReplyHeader - Layer 181
 MessageReplyHeader = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.MessageReplyHeader, pydantic.Tag('MessageReplyHeader')],
-        typing.Annotated[types.MessageReplyStoryHeader, pydantic.Tag('MessageReplyStoryHeader')]
+        typing.Annotated[
+            types.MessageReplyHeader,
+            pydantic.Tag('MessageReplyHeader')        ],
+        typing.Annotated[
+            types.MessageReplyStoryHeader,
+            pydantic.Tag('MessageReplyStoryHeader')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

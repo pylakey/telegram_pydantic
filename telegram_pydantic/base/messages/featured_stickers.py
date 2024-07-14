@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # messages.FeaturedStickers - Layer 181
 FeaturedStickers = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.messages.FeaturedStickers, pydantic.Tag('messages.FeaturedStickers')],
-        typing.Annotated[types.messages.FeaturedStickersNotModified, pydantic.Tag('messages.FeaturedStickersNotModified')]
+        typing.Annotated[
+            types.messages.FeaturedStickers,
+            pydantic.Tag('messages.FeaturedStickers'),
+            pydantic.Tag('FeaturedStickers')
+        ],
+        typing.Annotated[
+            types.messages.FeaturedStickersNotModified,
+            pydantic.Tag('messages.FeaturedStickersNotModified'),
+            pydantic.Tag('FeaturedStickersNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # messages.RecentStickers - Layer 181
 RecentStickers = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.messages.RecentStickers, pydantic.Tag('messages.RecentStickers')],
-        typing.Annotated[types.messages.RecentStickersNotModified, pydantic.Tag('messages.RecentStickersNotModified')]
+        typing.Annotated[
+            types.messages.RecentStickers,
+            pydantic.Tag('messages.RecentStickers'),
+            pydantic.Tag('RecentStickers')
+        ],
+        typing.Annotated[
+            types.messages.RecentStickersNotModified,
+            pydantic.Tag('messages.RecentStickersNotModified'),
+            pydantic.Tag('RecentStickersNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

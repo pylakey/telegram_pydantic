@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # stories.AllStories - Layer 181
 AllStories = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.stories.AllStories, pydantic.Tag('stories.AllStories')],
-        typing.Annotated[types.stories.AllStoriesNotModified, pydantic.Tag('stories.AllStoriesNotModified')]
+        typing.Annotated[
+            types.stories.AllStories,
+            pydantic.Tag('stories.AllStories'),
+            pydantic.Tag('AllStories')
+        ],
+        typing.Annotated[
+            types.stories.AllStoriesNotModified,
+            pydantic.Tag('stories.AllStoriesNotModified'),
+            pydantic.Tag('AllStoriesNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

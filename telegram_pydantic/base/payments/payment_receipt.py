@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # payments.PaymentReceipt - Layer 181
 PaymentReceipt = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.payments.PaymentReceipt, pydantic.Tag('payments.PaymentReceipt')],
-        typing.Annotated[types.payments.PaymentReceiptStars, pydantic.Tag('payments.PaymentReceiptStars')]
+        typing.Annotated[
+            types.payments.PaymentReceipt,
+            pydantic.Tag('payments.PaymentReceipt'),
+            pydantic.Tag('PaymentReceipt')
+        ],
+        typing.Annotated[
+            types.payments.PaymentReceiptStars,
+            pydantic.Tag('payments.PaymentReceiptStars'),
+            pydantic.Tag('PaymentReceiptStars')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

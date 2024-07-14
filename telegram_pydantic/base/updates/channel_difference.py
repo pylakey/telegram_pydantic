@@ -10,9 +10,21 @@ from telegram_pydantic.utils import base_type_discriminator
 # updates.ChannelDifference - Layer 181
 ChannelDifference = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.updates.ChannelDifference, pydantic.Tag('updates.ChannelDifference')],
-        typing.Annotated[types.updates.ChannelDifferenceEmpty, pydantic.Tag('updates.ChannelDifferenceEmpty')],
-        typing.Annotated[types.updates.ChannelDifferenceTooLong, pydantic.Tag('updates.ChannelDifferenceTooLong')]
+        typing.Annotated[
+            types.updates.ChannelDifference,
+            pydantic.Tag('updates.ChannelDifference'),
+            pydantic.Tag('ChannelDifference')
+        ],
+        typing.Annotated[
+            types.updates.ChannelDifferenceEmpty,
+            pydantic.Tag('updates.ChannelDifferenceEmpty'),
+            pydantic.Tag('ChannelDifferenceEmpty')
+        ],
+        typing.Annotated[
+            types.updates.ChannelDifferenceTooLong,
+            pydantic.Tag('updates.ChannelDifferenceTooLong'),
+            pydantic.Tag('ChannelDifferenceTooLong')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

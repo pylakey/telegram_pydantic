@@ -10,8 +10,16 @@ from telegram_pydantic.utils import base_type_discriminator
 # contacts.Blocked - Layer 181
 Blocked = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.contacts.Blocked, pydantic.Tag('contacts.Blocked')],
-        typing.Annotated[types.contacts.BlockedSlice, pydantic.Tag('contacts.BlockedSlice')]
+        typing.Annotated[
+            types.contacts.Blocked,
+            pydantic.Tag('contacts.Blocked'),
+            pydantic.Tag('Blocked')
+        ],
+        typing.Annotated[
+            types.contacts.BlockedSlice,
+            pydantic.Tag('contacts.BlockedSlice'),
+            pydantic.Tag('BlockedSlice')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

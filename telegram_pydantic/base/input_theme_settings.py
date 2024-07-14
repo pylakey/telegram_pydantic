@@ -10,5 +10,7 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 InputThemeSettings = typing.Union[
-    typing.Annotated[types.InputThemeSettings, pydantic.Tag('InputThemeSettings')]
+    typing.Annotated[
+            types.InputThemeSettings,
+            pydantic.Tag('InputThemeSettings')        ]
 ]

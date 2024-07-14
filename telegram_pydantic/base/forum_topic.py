@@ -10,8 +10,12 @@ from telegram_pydantic.utils import base_type_discriminator
 # ForumTopic - Layer 181
 ForumTopic = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.ForumTopic, pydantic.Tag('ForumTopic')],
-        typing.Annotated[types.ForumTopicDeleted, pydantic.Tag('ForumTopicDeleted')]
+        typing.Annotated[
+            types.ForumTopic,
+            pydantic.Tag('ForumTopic')        ],
+        typing.Annotated[
+            types.ForumTopicDeleted,
+            pydantic.Tag('ForumTopicDeleted')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

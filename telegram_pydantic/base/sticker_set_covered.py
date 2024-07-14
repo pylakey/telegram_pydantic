@@ -10,10 +10,18 @@ from telegram_pydantic.utils import base_type_discriminator
 # StickerSetCovered - Layer 181
 StickerSetCovered = typing.Annotated[
     typing.Union[
-        typing.Annotated[types.StickerSetCovered, pydantic.Tag('StickerSetCovered')],
-        typing.Annotated[types.StickerSetFullCovered, pydantic.Tag('StickerSetFullCovered')],
-        typing.Annotated[types.StickerSetMultiCovered, pydantic.Tag('StickerSetMultiCovered')],
-        typing.Annotated[types.StickerSetNoCovered, pydantic.Tag('StickerSetNoCovered')]
+        typing.Annotated[
+            types.StickerSetCovered,
+            pydantic.Tag('StickerSetCovered')        ],
+        typing.Annotated[
+            types.StickerSetFullCovered,
+            pydantic.Tag('StickerSetFullCovered')        ],
+        typing.Annotated[
+            types.StickerSetMultiCovered,
+            pydantic.Tag('StickerSetMultiCovered')        ],
+        typing.Annotated[
+            types.StickerSetNoCovered,
+            pydantic.Tag('StickerSetNoCovered')        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

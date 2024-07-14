@@ -10,5 +10,9 @@ from telegram_pydantic import types
 # NOTICE: This is a workaround for pydantic. Discriminated unions doesn't work with single type in Union
 # pydantic.Discriminator(base_type_discriminator)
 SendAsPeers = typing.Union[
-    typing.Annotated[types.channels.SendAsPeers, pydantic.Tag('channels.SendAsPeers')]
+    typing.Annotated[
+            types.channels.SendAsPeers,
+            pydantic.Tag('channels.SendAsPeers'),
+            pydantic.Tag('SendAsPeers')
+        ]
 ]
