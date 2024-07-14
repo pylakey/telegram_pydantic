@@ -1,5 +1,5 @@
 def base_type_discriminator(v: dict) -> str | None:
     if isinstance(v, dict):
-        return v.get('_', "").split('.')[-1] or None
+        return v.get('_', "").split('.')[-1] or v.get('QUALNAME', "").split('.')[-1] or None
 
     return None
