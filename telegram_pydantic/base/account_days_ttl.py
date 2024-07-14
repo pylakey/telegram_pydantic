@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AccountDaysTTL = typing.Union[
     typing.Annotated[
-            types.AccountDaysTTL,
-            pydantic.Tag('AccountDaysTTL')        ]
+        types.AccountDaysTTL,
+        pydantic.Tag('AccountDaysTTL')
+    ]
 ]

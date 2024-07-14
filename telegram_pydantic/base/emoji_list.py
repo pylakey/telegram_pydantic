@@ -12,10 +12,12 @@ EmojiList = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.EmojiList,
-            pydantic.Tag('EmojiList')        ],
+            pydantic.Tag('EmojiList')
+        ],
         typing.Annotated[
             types.EmojiListNotModified,
-            pydantic.Tag('EmojiListNotModified')        ]
+            pydantic.Tag('EmojiListNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

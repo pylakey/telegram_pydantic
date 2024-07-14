@@ -12,13 +12,16 @@ InputWebFileLocation = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputWebFileAudioAlbumThumbLocation,
-            pydantic.Tag('InputWebFileAudioAlbumThumbLocation')        ],
+            pydantic.Tag('InputWebFileAudioAlbumThumbLocation')
+        ],
         typing.Annotated[
             types.InputWebFileGeoPointLocation,
-            pydantic.Tag('InputWebFileGeoPointLocation')        ],
+            pydantic.Tag('InputWebFileGeoPointLocation')
+        ],
         typing.Annotated[
             types.InputWebFileLocation,
-            pydantic.Tag('InputWebFileLocation')        ]
+            pydantic.Tag('InputWebFileLocation')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

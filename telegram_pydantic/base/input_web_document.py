@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InputWebDocument = typing.Union[
     typing.Annotated[
-            types.InputWebDocument,
-            pydantic.Tag('InputWebDocument')        ]
+        types.InputWebDocument,
+        pydantic.Tag('InputWebDocument')
+    ]
 ]

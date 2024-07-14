@@ -12,13 +12,16 @@ BusinessAwayMessageSchedule = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.BusinessAwayMessageScheduleAlways,
-            pydantic.Tag('BusinessAwayMessageScheduleAlways')        ],
+            pydantic.Tag('BusinessAwayMessageScheduleAlways')
+        ],
         typing.Annotated[
             types.BusinessAwayMessageScheduleCustom,
-            pydantic.Tag('BusinessAwayMessageScheduleCustom')        ],
+            pydantic.Tag('BusinessAwayMessageScheduleCustom')
+        ],
         typing.Annotated[
             types.BusinessAwayMessageScheduleOutsideWorkHours,
-            pydantic.Tag('BusinessAwayMessageScheduleOutsideWorkHours')        ]
+            pydantic.Tag('BusinessAwayMessageScheduleOutsideWorkHours')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -12,10 +12,12 @@ EncryptedFile = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.EncryptedFile,
-            pydantic.Tag('EncryptedFile')        ],
+            pydantic.Tag('EncryptedFile')
+        ],
         typing.Annotated[
             types.EncryptedFileEmpty,
-            pydantic.Tag('EncryptedFileEmpty')        ]
+            pydantic.Tag('EncryptedFileEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

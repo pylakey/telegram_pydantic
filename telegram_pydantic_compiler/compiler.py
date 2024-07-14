@@ -264,9 +264,9 @@ def start(format: bool = False):
                 namespaces_to_types[key].append(c.type)
 
     for k, v in types_to_constructors.items():
-        for i in v:
+        for tab in v:
             try:
-                constructors_to_functions[i] = types_to_functions[k]
+                constructors_to_functions[tab] = types_to_functions[k]
             except KeyError:
                 pass
 
@@ -287,29 +287,42 @@ def start(format: bool = False):
         else:
             tmpl = base_type_tmpl
 
+        ind1 = " " * 4
+        ind2 = " " * 8
+        ind3 = " " * 12
+
         with open(dir_path / f"{snake(module)}.py", "w") as f:
             types = []
 
             for c in constructors:
-                i = " " * 12
+                ei = ind1
+
+                if len(constructors) > 1:
+                    ei += ind1
+
+                iei = ei + ind1
+
                 t = (
-                    f"typing.Annotated[\n"
-                    f"{i}types.{c},\n"
-                    f"{i}pydantic.Tag('{c}')"
+                    f"{ind1}typing.Annotated[\n"
+                    f"{iei}types.{c},\n"
+                    f"{iei}pydantic.Tag('{c}')"
                 )
                 only_name = c.split(".")[-1]
 
                 if only_name != c:
-                    t += f",\n{i}pydantic.Tag('{only_name}')\n"
+                    t += (
+                        f",\n"
+                        f"{iei}pydantic.Tag('{only_name}')"
+                    )
 
-                t += f"{' ' * 8}]"
+                t += f"\n{ei}]"
                 types.append(t)
 
             f.write(
                 tmpl.format(
                     name=type,
                     qualname=qualtype,
-                    types=",\n        ".join(types),
+                    types=f",\n{' ' * 4}".join(types),
                     layer=layer
                 )
             )
@@ -319,9 +332,9 @@ def start(format: bool = False):
         arguments = ""
 
         if sorted_args:
-            for i in sorted_args:
-                arg_name = i[0]
-                arg_type = i[1]
+            for tab in sorted_args:
+                arg_name = tab[0]
+                arg_type = tab[1]
 
                 if "int" in arg_type and (
                         re.search(r'(\b|_)(date|until|since)(\b|_)', arg_name)
@@ -334,12 +347,12 @@ def start(format: bool = False):
                 if arg_name in arg_aliases:
                     aliases = arg_aliases[arg_name]
                     aliases_string = ", ".join([f"'{a}'" for a in aliases])
-                    i = " " * 8
+                    tab = " " * 8
                     default = (
                         f" = pydantic.Field(\n"
-                        f"{i}{'None' if is_optional else '...'},\n"
-                        f"{i}serialization_alias='{arg_name}',\n"
-                        f"{i}validation_alias=pydantic.AliasChoices('{arg_name}', {aliases_string})\n"
+                        f"{tab}{'None' if is_optional else '...'},\n"
+                        f"{tab}serialization_alias='{arg_name}',\n"
+                        f"{tab}validation_alias=pydantic.AliasChoices('{arg_name}', {aliases_string})\n"
                         f"{' ' * 4})"
                     )
                     arg_name = aliases[0]

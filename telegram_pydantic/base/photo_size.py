@@ -12,22 +12,28 @@ PhotoSize = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PhotoCachedSize,
-            pydantic.Tag('PhotoCachedSize')        ],
+            pydantic.Tag('PhotoCachedSize')
+        ],
         typing.Annotated[
             types.PhotoPathSize,
-            pydantic.Tag('PhotoPathSize')        ],
+            pydantic.Tag('PhotoPathSize')
+        ],
         typing.Annotated[
             types.PhotoSize,
-            pydantic.Tag('PhotoSize')        ],
+            pydantic.Tag('PhotoSize')
+        ],
         typing.Annotated[
             types.PhotoSizeEmpty,
-            pydantic.Tag('PhotoSizeEmpty')        ],
+            pydantic.Tag('PhotoSizeEmpty')
+        ],
         typing.Annotated[
             types.PhotoSizeProgressive,
-            pydantic.Tag('PhotoSizeProgressive')        ],
+            pydantic.Tag('PhotoSizeProgressive')
+        ],
         typing.Annotated[
             types.PhotoStrippedSize,
-            pydantic.Tag('PhotoStrippedSize')        ]
+            pydantic.Tag('PhotoStrippedSize')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

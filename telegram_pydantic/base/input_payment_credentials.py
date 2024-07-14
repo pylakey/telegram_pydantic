@@ -12,16 +12,20 @@ InputPaymentCredentials = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputPaymentCredentials,
-            pydantic.Tag('InputPaymentCredentials')        ],
+            pydantic.Tag('InputPaymentCredentials')
+        ],
         typing.Annotated[
             types.InputPaymentCredentialsApplePay,
-            pydantic.Tag('InputPaymentCredentialsApplePay')        ],
+            pydantic.Tag('InputPaymentCredentialsApplePay')
+        ],
         typing.Annotated[
             types.InputPaymentCredentialsGooglePay,
-            pydantic.Tag('InputPaymentCredentialsGooglePay')        ],
+            pydantic.Tag('InputPaymentCredentialsGooglePay')
+        ],
         typing.Annotated[
             types.InputPaymentCredentialsSaved,
-            pydantic.Tag('InputPaymentCredentialsSaved')        ]
+            pydantic.Tag('InputPaymentCredentialsSaved')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

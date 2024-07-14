@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Authorizations = typing.Union[
     typing.Annotated[
-            types.account.Authorizations,
-            pydantic.Tag('account.Authorizations'),
-            pydantic.Tag('Authorizations')
-        ]
+        types.account.Authorizations,
+        pydantic.Tag('account.Authorizations'),
+        pydantic.Tag('Authorizations')
+    ]
 ]

@@ -12,10 +12,12 @@ InputQuickReplyShortcut = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputQuickReplyShortcut,
-            pydantic.Tag('InputQuickReplyShortcut')        ],
+            pydantic.Tag('InputQuickReplyShortcut')
+        ],
         typing.Annotated[
             types.InputQuickReplyShortcutId,
-            pydantic.Tag('InputQuickReplyShortcutId')        ]
+            pydantic.Tag('InputQuickReplyShortcutId')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 DiscussionMessage = typing.Union[
     typing.Annotated[
-            types.messages.DiscussionMessage,
-            pydantic.Tag('messages.DiscussionMessage'),
-            pydantic.Tag('DiscussionMessage')
-        ]
+        types.messages.DiscussionMessage,
+        pydantic.Tag('messages.DiscussionMessage'),
+        pydantic.Tag('DiscussionMessage')
+    ]
 ]

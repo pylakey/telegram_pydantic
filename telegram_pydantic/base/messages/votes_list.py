@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 VotesList = typing.Union[
     typing.Annotated[
-            types.messages.VotesList,
-            pydantic.Tag('messages.VotesList'),
-            pydantic.Tag('VotesList')
-        ]
+        types.messages.VotesList,
+        pydantic.Tag('messages.VotesList'),
+        pydantic.Tag('VotesList')
+    ]
 ]

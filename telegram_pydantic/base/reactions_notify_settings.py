@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ReactionsNotifySettings = typing.Union[
     typing.Annotated[
-            types.ReactionsNotifySettings,
-            pydantic.Tag('ReactionsNotifySettings')        ]
+        types.ReactionsNotifySettings,
+        pydantic.Tag('ReactionsNotifySettings')
+    ]
 ]

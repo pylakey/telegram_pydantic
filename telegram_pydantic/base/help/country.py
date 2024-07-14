@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Country = typing.Union[
     typing.Annotated[
-            types.help.Country,
-            pydantic.Tag('help.Country'),
-            pydantic.Tag('Country')
-        ]
+        types.help.Country,
+        pydantic.Tag('help.Country'),
+        pydantic.Tag('Country')
+    ]
 ]

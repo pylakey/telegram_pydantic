@@ -12,13 +12,16 @@ EmailVerification = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.EmailVerificationApple,
-            pydantic.Tag('EmailVerificationApple')        ],
+            pydantic.Tag('EmailVerificationApple')
+        ],
         typing.Annotated[
             types.EmailVerificationCode,
-            pydantic.Tag('EmailVerificationCode')        ],
+            pydantic.Tag('EmailVerificationCode')
+        ],
         typing.Annotated[
             types.EmailVerificationGoogle,
-            pydantic.Tag('EmailVerificationGoogle')        ]
+            pydantic.Tag('EmailVerificationGoogle')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

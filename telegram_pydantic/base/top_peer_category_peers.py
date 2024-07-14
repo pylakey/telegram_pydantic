@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 TopPeerCategoryPeers = typing.Union[
     typing.Annotated[
-            types.TopPeerCategoryPeers,
-            pydantic.Tag('TopPeerCategoryPeers')        ]
+        types.TopPeerCategoryPeers,
+        pydantic.Tag('TopPeerCategoryPeers')
+    ]
 ]

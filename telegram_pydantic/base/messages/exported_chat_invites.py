@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ExportedChatInvites = typing.Union[
     typing.Annotated[
-            types.messages.ExportedChatInvites,
-            pydantic.Tag('messages.ExportedChatInvites'),
-            pydantic.Tag('ExportedChatInvites')
-        ]
+        types.messages.ExportedChatInvites,
+        pydantic.Tag('messages.ExportedChatInvites'),
+        pydantic.Tag('ExportedChatInvites')
+    ]
 ]

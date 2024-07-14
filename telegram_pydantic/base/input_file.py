@@ -12,10 +12,12 @@ InputFile = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputFile,
-            pydantic.Tag('InputFile')        ],
+            pydantic.Tag('InputFile')
+        ],
         typing.Annotated[
             types.InputFileBig,
-            pydantic.Tag('InputFileBig')        ]
+            pydantic.Tag('InputFileBig')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

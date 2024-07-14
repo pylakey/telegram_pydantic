@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MessageReactions = typing.Union[
     typing.Annotated[
-            types.MessageReactions,
-            pydantic.Tag('MessageReactions')        ]
+        types.MessageReactions,
+        pydantic.Tag('MessageReactions')
+    ]
 ]

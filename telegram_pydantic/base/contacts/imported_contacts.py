@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ImportedContacts = typing.Union[
     typing.Annotated[
-            types.contacts.ImportedContacts,
-            pydantic.Tag('contacts.ImportedContacts'),
-            pydantic.Tag('ImportedContacts')
-        ]
+        types.contacts.ImportedContacts,
+        pydantic.Tag('contacts.ImportedContacts'),
+        pydantic.Tag('ImportedContacts')
+    ]
 ]

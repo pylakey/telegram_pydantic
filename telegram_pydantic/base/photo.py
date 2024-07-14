@@ -12,10 +12,12 @@ Photo = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.Photo,
-            pydantic.Tag('Photo')        ],
+            pydantic.Tag('Photo')
+        ],
         typing.Annotated[
             types.PhotoEmpty,
-            pydantic.Tag('PhotoEmpty')        ]
+            pydantic.Tag('PhotoEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

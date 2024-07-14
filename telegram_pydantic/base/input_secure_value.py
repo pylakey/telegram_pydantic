@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InputSecureValue = typing.Union[
     typing.Annotated[
-            types.InputSecureValue,
-            pydantic.Tag('InputSecureValue')        ]
+        types.InputSecureValue,
+        pydantic.Tag('InputSecureValue')
+    ]
 ]

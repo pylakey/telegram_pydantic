@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PostAddress = typing.Union[
     typing.Annotated[
-            types.PostAddress,
-            pydantic.Tag('PostAddress')        ]
+        types.PostAddress,
+        pydantic.Tag('PostAddress')
+    ]
 ]

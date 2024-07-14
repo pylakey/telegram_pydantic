@@ -12,16 +12,20 @@ PhoneCallDiscardReason = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PhoneCallDiscardReasonBusy,
-            pydantic.Tag('PhoneCallDiscardReasonBusy')        ],
+            pydantic.Tag('PhoneCallDiscardReasonBusy')
+        ],
         typing.Annotated[
             types.PhoneCallDiscardReasonDisconnect,
-            pydantic.Tag('PhoneCallDiscardReasonDisconnect')        ],
+            pydantic.Tag('PhoneCallDiscardReasonDisconnect')
+        ],
         typing.Annotated[
             types.PhoneCallDiscardReasonHangup,
-            pydantic.Tag('PhoneCallDiscardReasonHangup')        ],
+            pydantic.Tag('PhoneCallDiscardReasonHangup')
+        ],
         typing.Annotated[
             types.PhoneCallDiscardReasonMissed,
-            pydantic.Tag('PhoneCallDiscardReasonMissed')        ]
+            pydantic.Tag('PhoneCallDiscardReasonMissed')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

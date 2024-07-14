@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BotCommand = typing.Union[
     typing.Annotated[
-            types.BotCommand,
-            pydantic.Tag('BotCommand')        ]
+        types.BotCommand,
+        pydantic.Tag('BotCommand')
+    ]
 ]

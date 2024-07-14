@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 UserFull = typing.Union[
     typing.Annotated[
-            types.UserFull,
-            pydantic.Tag('UserFull')        ]
+        types.UserFull,
+        pydantic.Tag('UserFull')
+    ]
 ]

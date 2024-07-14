@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Game = typing.Union[
     typing.Annotated[
-            types.Game,
-            pydantic.Tag('Game')        ]
+        types.Game,
+        pydantic.Tag('Game')
+    ]
 ]

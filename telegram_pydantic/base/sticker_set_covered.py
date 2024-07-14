@@ -12,16 +12,20 @@ StickerSetCovered = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.StickerSetCovered,
-            pydantic.Tag('StickerSetCovered')        ],
+            pydantic.Tag('StickerSetCovered')
+        ],
         typing.Annotated[
             types.StickerSetFullCovered,
-            pydantic.Tag('StickerSetFullCovered')        ],
+            pydantic.Tag('StickerSetFullCovered')
+        ],
         typing.Annotated[
             types.StickerSetMultiCovered,
-            pydantic.Tag('StickerSetMultiCovered')        ],
+            pydantic.Tag('StickerSetMultiCovered')
+        ],
         typing.Annotated[
             types.StickerSetNoCovered,
-            pydantic.Tag('StickerSetNoCovered')        ]
+            pydantic.Tag('StickerSetNoCovered')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

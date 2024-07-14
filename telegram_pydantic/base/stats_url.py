@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StatsURL = typing.Union[
     typing.Annotated[
-            types.StatsURL,
-            pydantic.Tag('StatsURL')        ]
+        types.StatsURL,
+        pydantic.Tag('StatsURL')
+    ]
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BusinessWorkHours = typing.Union[
     typing.Annotated[
-            types.BusinessWorkHours,
-            pydantic.Tag('BusinessWorkHours')        ]
+        types.BusinessWorkHours,
+        pydantic.Tag('BusinessWorkHours')
+    ]
 ]

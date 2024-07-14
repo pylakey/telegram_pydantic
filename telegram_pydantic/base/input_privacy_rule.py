@@ -12,34 +12,44 @@ InputPrivacyRule = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputPrivacyValueAllowAll,
-            pydantic.Tag('InputPrivacyValueAllowAll')        ],
+            pydantic.Tag('InputPrivacyValueAllowAll')
+        ],
         typing.Annotated[
             types.InputPrivacyValueAllowChatParticipants,
-            pydantic.Tag('InputPrivacyValueAllowChatParticipants')        ],
+            pydantic.Tag('InputPrivacyValueAllowChatParticipants')
+        ],
         typing.Annotated[
             types.InputPrivacyValueAllowCloseFriends,
-            pydantic.Tag('InputPrivacyValueAllowCloseFriends')        ],
+            pydantic.Tag('InputPrivacyValueAllowCloseFriends')
+        ],
         typing.Annotated[
             types.InputPrivacyValueAllowContacts,
-            pydantic.Tag('InputPrivacyValueAllowContacts')        ],
+            pydantic.Tag('InputPrivacyValueAllowContacts')
+        ],
         typing.Annotated[
             types.InputPrivacyValueAllowPremium,
-            pydantic.Tag('InputPrivacyValueAllowPremium')        ],
+            pydantic.Tag('InputPrivacyValueAllowPremium')
+        ],
         typing.Annotated[
             types.InputPrivacyValueAllowUsers,
-            pydantic.Tag('InputPrivacyValueAllowUsers')        ],
+            pydantic.Tag('InputPrivacyValueAllowUsers')
+        ],
         typing.Annotated[
             types.InputPrivacyValueDisallowAll,
-            pydantic.Tag('InputPrivacyValueDisallowAll')        ],
+            pydantic.Tag('InputPrivacyValueDisallowAll')
+        ],
         typing.Annotated[
             types.InputPrivacyValueDisallowChatParticipants,
-            pydantic.Tag('InputPrivacyValueDisallowChatParticipants')        ],
+            pydantic.Tag('InputPrivacyValueDisallowChatParticipants')
+        ],
         typing.Annotated[
             types.InputPrivacyValueDisallowContacts,
-            pydantic.Tag('InputPrivacyValueDisallowContacts')        ],
+            pydantic.Tag('InputPrivacyValueDisallowContacts')
+        ],
         typing.Annotated[
             types.InputPrivacyValueDisallowUsers,
-            pydantic.Tag('InputPrivacyValueDisallowUsers')        ]
+            pydantic.Tag('InputPrivacyValueDisallowUsers')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

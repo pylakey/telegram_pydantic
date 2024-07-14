@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 WebViewMessageSent = typing.Union[
     typing.Annotated[
-            types.WebViewMessageSent,
-            pydantic.Tag('WebViewMessageSent')        ]
+        types.WebViewMessageSent,
+        pydantic.Tag('WebViewMessageSent')
+    ]
 ]

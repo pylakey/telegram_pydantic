@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SavedInfo = typing.Union[
     typing.Annotated[
-            types.payments.SavedInfo,
-            pydantic.Tag('payments.SavedInfo'),
-            pydantic.Tag('SavedInfo')
-        ]
+        types.payments.SavedInfo,
+        pydantic.Tag('payments.SavedInfo'),
+        pydantic.Tag('SavedInfo')
+    ]
 ]

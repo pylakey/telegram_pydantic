@@ -12,10 +12,12 @@ WallPaper = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.WallPaper,
-            pydantic.Tag('WallPaper')        ],
+            pydantic.Tag('WallPaper')
+        ],
         typing.Annotated[
             types.WallPaperNoFile,
-            pydantic.Tag('WallPaperNoFile')        ]
+            pydantic.Tag('WallPaperNoFile')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

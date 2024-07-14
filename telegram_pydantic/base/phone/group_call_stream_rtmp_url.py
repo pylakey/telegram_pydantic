@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 GroupCallStreamRtmpUrl = typing.Union[
     typing.Annotated[
-            types.phone.GroupCallStreamRtmpUrl,
-            pydantic.Tag('phone.GroupCallStreamRtmpUrl'),
-            pydantic.Tag('GroupCallStreamRtmpUrl')
-        ]
+        types.phone.GroupCallStreamRtmpUrl,
+        pydantic.Tag('phone.GroupCallStreamRtmpUrl'),
+        pydantic.Tag('GroupCallStreamRtmpUrl')
+    ]
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SuggestedShortName = typing.Union[
     typing.Annotated[
-            types.stickers.SuggestedShortName,
-            pydantic.Tag('stickers.SuggestedShortName'),
-            pydantic.Tag('SuggestedShortName')
-        ]
+        types.stickers.SuggestedShortName,
+        pydantic.Tag('stickers.SuggestedShortName'),
+        pydantic.Tag('SuggestedShortName')
+    ]
 ]

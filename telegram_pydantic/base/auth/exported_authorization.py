@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ExportedAuthorization = typing.Union[
     typing.Annotated[
-            types.auth.ExportedAuthorization,
-            pydantic.Tag('auth.ExportedAuthorization'),
-            pydantic.Tag('ExportedAuthorization')
-        ]
+        types.auth.ExportedAuthorization,
+        pydantic.Tag('auth.ExportedAuthorization'),
+        pydantic.Tag('ExportedAuthorization')
+    ]
 ]

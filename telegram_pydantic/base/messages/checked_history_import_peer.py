@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 CheckedHistoryImportPeer = typing.Union[
     typing.Annotated[
-            types.messages.CheckedHistoryImportPeer,
-            pydantic.Tag('messages.CheckedHistoryImportPeer'),
-            pydantic.Tag('CheckedHistoryImportPeer')
-        ]
+        types.messages.CheckedHistoryImportPeer,
+        pydantic.Tag('messages.CheckedHistoryImportPeer'),
+        pydantic.Tag('CheckedHistoryImportPeer')
+    ]
 ]

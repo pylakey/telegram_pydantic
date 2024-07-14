@@ -12,10 +12,12 @@ Dialog = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.Dialog,
-            pydantic.Tag('Dialog')        ],
+            pydantic.Tag('Dialog')
+        ],
         typing.Annotated[
             types.DialogFolder,
-            pydantic.Tag('DialogFolder')        ]
+            pydantic.Tag('DialogFolder')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

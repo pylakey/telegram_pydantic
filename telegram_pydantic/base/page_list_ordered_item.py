@@ -12,10 +12,12 @@ PageListOrderedItem = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PageListOrderedItemBlocks,
-            pydantic.Tag('PageListOrderedItemBlocks')        ],
+            pydantic.Tag('PageListOrderedItemBlocks')
+        ],
         typing.Annotated[
             types.PageListOrderedItemText,
-            pydantic.Tag('PageListOrderedItemText')        ]
+            pydantic.Tag('PageListOrderedItemText')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

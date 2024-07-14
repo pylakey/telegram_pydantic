@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InputEncryptedChat = typing.Union[
     typing.Annotated[
-            types.InputEncryptedChat,
-            pydantic.Tag('InputEncryptedChat')        ]
+        types.InputEncryptedChat,
+        pydantic.Tag('InputEncryptedChat')
+    ]
 ]

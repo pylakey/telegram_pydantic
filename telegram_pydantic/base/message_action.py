@@ -12,133 +12,176 @@ MessageAction = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.MessageActionBoostApply,
-            pydantic.Tag('MessageActionBoostApply')        ],
+            pydantic.Tag('MessageActionBoostApply')
+        ],
         typing.Annotated[
             types.MessageActionBotAllowed,
-            pydantic.Tag('MessageActionBotAllowed')        ],
+            pydantic.Tag('MessageActionBotAllowed')
+        ],
         typing.Annotated[
             types.MessageActionChannelCreate,
-            pydantic.Tag('MessageActionChannelCreate')        ],
+            pydantic.Tag('MessageActionChannelCreate')
+        ],
         typing.Annotated[
             types.MessageActionChannelMigrateFrom,
-            pydantic.Tag('MessageActionChannelMigrateFrom')        ],
+            pydantic.Tag('MessageActionChannelMigrateFrom')
+        ],
         typing.Annotated[
             types.MessageActionChatAddUser,
-            pydantic.Tag('MessageActionChatAddUser')        ],
+            pydantic.Tag('MessageActionChatAddUser')
+        ],
         typing.Annotated[
             types.MessageActionChatCreate,
-            pydantic.Tag('MessageActionChatCreate')        ],
+            pydantic.Tag('MessageActionChatCreate')
+        ],
         typing.Annotated[
             types.MessageActionChatDeletePhoto,
-            pydantic.Tag('MessageActionChatDeletePhoto')        ],
+            pydantic.Tag('MessageActionChatDeletePhoto')
+        ],
         typing.Annotated[
             types.MessageActionChatDeleteUser,
-            pydantic.Tag('MessageActionChatDeleteUser')        ],
+            pydantic.Tag('MessageActionChatDeleteUser')
+        ],
         typing.Annotated[
             types.MessageActionChatEditPhoto,
-            pydantic.Tag('MessageActionChatEditPhoto')        ],
+            pydantic.Tag('MessageActionChatEditPhoto')
+        ],
         typing.Annotated[
             types.MessageActionChatEditTitle,
-            pydantic.Tag('MessageActionChatEditTitle')        ],
+            pydantic.Tag('MessageActionChatEditTitle')
+        ],
         typing.Annotated[
             types.MessageActionChatJoinedByLink,
-            pydantic.Tag('MessageActionChatJoinedByLink')        ],
+            pydantic.Tag('MessageActionChatJoinedByLink')
+        ],
         typing.Annotated[
             types.MessageActionChatJoinedByRequest,
-            pydantic.Tag('MessageActionChatJoinedByRequest')        ],
+            pydantic.Tag('MessageActionChatJoinedByRequest')
+        ],
         typing.Annotated[
             types.MessageActionChatMigrateTo,
-            pydantic.Tag('MessageActionChatMigrateTo')        ],
+            pydantic.Tag('MessageActionChatMigrateTo')
+        ],
         typing.Annotated[
             types.MessageActionContactSignUp,
-            pydantic.Tag('MessageActionContactSignUp')        ],
+            pydantic.Tag('MessageActionContactSignUp')
+        ],
         typing.Annotated[
             types.MessageActionCustomAction,
-            pydantic.Tag('MessageActionCustomAction')        ],
+            pydantic.Tag('MessageActionCustomAction')
+        ],
         typing.Annotated[
             types.MessageActionEmpty,
-            pydantic.Tag('MessageActionEmpty')        ],
+            pydantic.Tag('MessageActionEmpty')
+        ],
         typing.Annotated[
             types.MessageActionGameScore,
-            pydantic.Tag('MessageActionGameScore')        ],
+            pydantic.Tag('MessageActionGameScore')
+        ],
         typing.Annotated[
             types.MessageActionGeoProximityReached,
-            pydantic.Tag('MessageActionGeoProximityReached')        ],
+            pydantic.Tag('MessageActionGeoProximityReached')
+        ],
         typing.Annotated[
             types.MessageActionGiftCode,
-            pydantic.Tag('MessageActionGiftCode')        ],
+            pydantic.Tag('MessageActionGiftCode')
+        ],
         typing.Annotated[
             types.MessageActionGiftPremium,
-            pydantic.Tag('MessageActionGiftPremium')        ],
+            pydantic.Tag('MessageActionGiftPremium')
+        ],
         typing.Annotated[
             types.MessageActionGiveawayLaunch,
-            pydantic.Tag('MessageActionGiveawayLaunch')        ],
+            pydantic.Tag('MessageActionGiveawayLaunch')
+        ],
         typing.Annotated[
             types.MessageActionGiveawayResults,
-            pydantic.Tag('MessageActionGiveawayResults')        ],
+            pydantic.Tag('MessageActionGiveawayResults')
+        ],
         typing.Annotated[
             types.MessageActionGroupCall,
-            pydantic.Tag('MessageActionGroupCall')        ],
+            pydantic.Tag('MessageActionGroupCall')
+        ],
         typing.Annotated[
             types.MessageActionGroupCallScheduled,
-            pydantic.Tag('MessageActionGroupCallScheduled')        ],
+            pydantic.Tag('MessageActionGroupCallScheduled')
+        ],
         typing.Annotated[
             types.MessageActionHistoryClear,
-            pydantic.Tag('MessageActionHistoryClear')        ],
+            pydantic.Tag('MessageActionHistoryClear')
+        ],
         typing.Annotated[
             types.MessageActionInviteToGroupCall,
-            pydantic.Tag('MessageActionInviteToGroupCall')        ],
+            pydantic.Tag('MessageActionInviteToGroupCall')
+        ],
         typing.Annotated[
             types.MessageActionPaymentSent,
-            pydantic.Tag('MessageActionPaymentSent')        ],
+            pydantic.Tag('MessageActionPaymentSent')
+        ],
         typing.Annotated[
             types.MessageActionPaymentSentMe,
-            pydantic.Tag('MessageActionPaymentSentMe')        ],
+            pydantic.Tag('MessageActionPaymentSentMe')
+        ],
         typing.Annotated[
             types.MessageActionPhoneCall,
-            pydantic.Tag('MessageActionPhoneCall')        ],
+            pydantic.Tag('MessageActionPhoneCall')
+        ],
         typing.Annotated[
             types.MessageActionPinMessage,
-            pydantic.Tag('MessageActionPinMessage')        ],
+            pydantic.Tag('MessageActionPinMessage')
+        ],
         typing.Annotated[
             types.MessageActionRequestedPeer,
-            pydantic.Tag('MessageActionRequestedPeer')        ],
+            pydantic.Tag('MessageActionRequestedPeer')
+        ],
         typing.Annotated[
             types.MessageActionRequestedPeerSentMe,
-            pydantic.Tag('MessageActionRequestedPeerSentMe')        ],
+            pydantic.Tag('MessageActionRequestedPeerSentMe')
+        ],
         typing.Annotated[
             types.MessageActionScreenshotTaken,
-            pydantic.Tag('MessageActionScreenshotTaken')        ],
+            pydantic.Tag('MessageActionScreenshotTaken')
+        ],
         typing.Annotated[
             types.MessageActionSecureValuesSent,
-            pydantic.Tag('MessageActionSecureValuesSent')        ],
+            pydantic.Tag('MessageActionSecureValuesSent')
+        ],
         typing.Annotated[
             types.MessageActionSecureValuesSentMe,
-            pydantic.Tag('MessageActionSecureValuesSentMe')        ],
+            pydantic.Tag('MessageActionSecureValuesSentMe')
+        ],
         typing.Annotated[
             types.MessageActionSetChatTheme,
-            pydantic.Tag('MessageActionSetChatTheme')        ],
+            pydantic.Tag('MessageActionSetChatTheme')
+        ],
         typing.Annotated[
             types.MessageActionSetChatWallPaper,
-            pydantic.Tag('MessageActionSetChatWallPaper')        ],
+            pydantic.Tag('MessageActionSetChatWallPaper')
+        ],
         typing.Annotated[
             types.MessageActionSetMessagesTTL,
-            pydantic.Tag('MessageActionSetMessagesTTL')        ],
+            pydantic.Tag('MessageActionSetMessagesTTL')
+        ],
         typing.Annotated[
             types.MessageActionSuggestProfilePhoto,
-            pydantic.Tag('MessageActionSuggestProfilePhoto')        ],
+            pydantic.Tag('MessageActionSuggestProfilePhoto')
+        ],
         typing.Annotated[
             types.MessageActionTopicCreate,
-            pydantic.Tag('MessageActionTopicCreate')        ],
+            pydantic.Tag('MessageActionTopicCreate')
+        ],
         typing.Annotated[
             types.MessageActionTopicEdit,
-            pydantic.Tag('MessageActionTopicEdit')        ],
+            pydantic.Tag('MessageActionTopicEdit')
+        ],
         typing.Annotated[
             types.MessageActionWebViewDataSent,
-            pydantic.Tag('MessageActionWebViewDataSent')        ],
+            pydantic.Tag('MessageActionWebViewDataSent')
+        ],
         typing.Annotated[
             types.MessageActionWebViewDataSentMe,
-            pydantic.Tag('MessageActionWebViewDataSentMe')        ]
+            pydantic.Tag('MessageActionWebViewDataSentMe')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

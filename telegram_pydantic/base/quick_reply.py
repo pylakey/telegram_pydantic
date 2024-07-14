@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 QuickReply = typing.Union[
     typing.Annotated[
-            types.QuickReply,
-            pydantic.Tag('QuickReply')        ]
+        types.QuickReply,
+        pydantic.Tag('QuickReply')
+    ]
 ]

@@ -12,22 +12,28 @@ MediaArea = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputMediaAreaChannelPost,
-            pydantic.Tag('InputMediaAreaChannelPost')        ],
+            pydantic.Tag('InputMediaAreaChannelPost')
+        ],
         typing.Annotated[
             types.InputMediaAreaVenue,
-            pydantic.Tag('InputMediaAreaVenue')        ],
+            pydantic.Tag('InputMediaAreaVenue')
+        ],
         typing.Annotated[
             types.MediaAreaChannelPost,
-            pydantic.Tag('MediaAreaChannelPost')        ],
+            pydantic.Tag('MediaAreaChannelPost')
+        ],
         typing.Annotated[
             types.MediaAreaGeoPoint,
-            pydantic.Tag('MediaAreaGeoPoint')        ],
+            pydantic.Tag('MediaAreaGeoPoint')
+        ],
         typing.Annotated[
             types.MediaAreaSuggestedReaction,
-            pydantic.Tag('MediaAreaSuggestedReaction')        ],
+            pydantic.Tag('MediaAreaSuggestedReaction')
+        ],
         typing.Annotated[
             types.MediaAreaVenue,
-            pydantic.Tag('MediaAreaVenue')        ]
+            pydantic.Tag('MediaAreaVenue')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

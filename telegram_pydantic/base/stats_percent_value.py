@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StatsPercentValue = typing.Union[
     typing.Annotated[
-            types.StatsPercentValue,
-            pydantic.Tag('StatsPercentValue')        ]
+        types.StatsPercentValue,
+        pydantic.Tag('StatsPercentValue')
+    ]
 ]

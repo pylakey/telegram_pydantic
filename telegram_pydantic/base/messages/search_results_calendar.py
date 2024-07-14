@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SearchResultsCalendar = typing.Union[
     typing.Annotated[
-            types.messages.SearchResultsCalendar,
-            pydantic.Tag('messages.SearchResultsCalendar'),
-            pydantic.Tag('SearchResultsCalendar')
-        ]
+        types.messages.SearchResultsCalendar,
+        pydantic.Tag('messages.SearchResultsCalendar'),
+        pydantic.Tag('SearchResultsCalendar')
+    ]
 ]

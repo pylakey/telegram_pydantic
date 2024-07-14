@@ -12,13 +12,16 @@ StoryItem = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.StoryItem,
-            pydantic.Tag('StoryItem')        ],
+            pydantic.Tag('StoryItem')
+        ],
         typing.Annotated[
             types.StoryItemDeleted,
-            pydantic.Tag('StoryItemDeleted')        ],
+            pydantic.Tag('StoryItemDeleted')
+        ],
         typing.Annotated[
             types.StoryItemSkipped,
-            pydantic.Tag('StoryItemSkipped')        ]
+            pydantic.Tag('StoryItemSkipped')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

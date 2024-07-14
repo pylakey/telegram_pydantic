@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PeerNotifySettings = typing.Union[
     typing.Annotated[
-            types.PeerNotifySettings,
-            pydantic.Tag('PeerNotifySettings')        ]
+        types.PeerNotifySettings,
+        pydantic.Tag('PeerNotifySettings')
+    ]
 ]

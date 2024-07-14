@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StatsAbsValueAndPrev = typing.Union[
     typing.Annotated[
-            types.StatsAbsValueAndPrev,
-            pydantic.Tag('StatsAbsValueAndPrev')        ]
+        types.StatsAbsValueAndPrev,
+        pydantic.Tag('StatsAbsValueAndPrev')
+    ]
 ]

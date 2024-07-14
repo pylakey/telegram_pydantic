@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SecureValue = typing.Union[
     typing.Annotated[
-            types.SecureValue,
-            pydantic.Tag('SecureValue')        ]
+        types.SecureValue,
+        pydantic.Tag('SecureValue')
+    ]
 ]

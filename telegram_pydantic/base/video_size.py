@@ -12,13 +12,16 @@ VideoSize = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.VideoSize,
-            pydantic.Tag('VideoSize')        ],
+            pydantic.Tag('VideoSize')
+        ],
         typing.Annotated[
             types.VideoSizeEmojiMarkup,
-            pydantic.Tag('VideoSizeEmojiMarkup')        ],
+            pydantic.Tag('VideoSizeEmojiMarkup')
+        ],
         typing.Annotated[
             types.VideoSizeStickerMarkup,
-            pydantic.Tag('VideoSizeStickerMarkup')        ]
+            pydantic.Tag('VideoSizeStickerMarkup')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

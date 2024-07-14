@@ -12,10 +12,12 @@ DialogPeer = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.DialogPeer,
-            pydantic.Tag('DialogPeer')        ],
+            pydantic.Tag('DialogPeer')
+        ],
         typing.Annotated[
             types.DialogPeerFolder,
-            pydantic.Tag('DialogPeerFolder')        ]
+            pydantic.Tag('DialogPeerFolder')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

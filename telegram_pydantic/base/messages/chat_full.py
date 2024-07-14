@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ChatFull = typing.Union[
     typing.Annotated[
-            types.messages.ChatFull,
-            pydantic.Tag('messages.ChatFull'),
-            pydantic.Tag('ChatFull')
-        ]
+        types.messages.ChatFull,
+        pydantic.Tag('messages.ChatFull'),
+        pydantic.Tag('ChatFull')
+    ]
 ]

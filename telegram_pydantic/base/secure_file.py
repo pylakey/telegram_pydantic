@@ -12,10 +12,12 @@ SecureFile = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.SecureFile,
-            pydantic.Tag('SecureFile')        ],
+            pydantic.Tag('SecureFile')
+        ],
         typing.Annotated[
             types.SecureFileEmpty,
-            pydantic.Tag('SecureFileEmpty')        ]
+            pydantic.Tag('SecureFileEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

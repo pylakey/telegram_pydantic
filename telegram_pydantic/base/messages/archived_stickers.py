@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ArchivedStickers = typing.Union[
     typing.Annotated[
-            types.messages.ArchivedStickers,
-            pydantic.Tag('messages.ArchivedStickers'),
-            pydantic.Tag('ArchivedStickers')
-        ]
+        types.messages.ArchivedStickers,
+        pydantic.Tag('messages.ArchivedStickers'),
+        pydantic.Tag('ArchivedStickers')
+    ]
 ]

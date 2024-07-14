@@ -12,10 +12,12 @@ ChannelLocation = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChannelLocation,
-            pydantic.Tag('ChannelLocation')        ],
+            pydantic.Tag('ChannelLocation')
+        ],
         typing.Annotated[
             types.ChannelLocationEmpty,
-            pydantic.Tag('ChannelLocationEmpty')        ]
+            pydantic.Tag('ChannelLocationEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

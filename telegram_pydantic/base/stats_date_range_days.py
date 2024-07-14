@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StatsDateRangeDays = typing.Union[
     typing.Annotated[
-            types.StatsDateRangeDays,
-            pydantic.Tag('StatsDateRangeDays')        ]
+        types.StatsDateRangeDays,
+        pydantic.Tag('StatsDateRangeDays')
+    ]
 ]

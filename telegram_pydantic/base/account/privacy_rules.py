@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PrivacyRules = typing.Union[
     typing.Annotated[
-            types.account.PrivacyRules,
-            pydantic.Tag('account.PrivacyRules'),
-            pydantic.Tag('PrivacyRules')
-        ]
+        types.account.PrivacyRules,
+        pydantic.Tag('account.PrivacyRules'),
+        pydantic.Tag('PrivacyRules')
+    ]
 ]

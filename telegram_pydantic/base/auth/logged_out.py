@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 LoggedOut = typing.Union[
     typing.Annotated[
-            types.auth.LoggedOut,
-            pydantic.Tag('auth.LoggedOut'),
-            pydantic.Tag('LoggedOut')
-        ]
+        types.auth.LoggedOut,
+        pydantic.Tag('auth.LoggedOut'),
+        pydantic.Tag('LoggedOut')
+    ]
 ]

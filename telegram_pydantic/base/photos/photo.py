@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Photo = typing.Union[
     typing.Annotated[
-            types.photos.Photo,
-            pydantic.Tag('photos.Photo'),
-            pydantic.Tag('Photo')
-        ]
+        types.photos.Photo,
+        pydantic.Tag('photos.Photo'),
+        pydantic.Tag('Photo')
+    ]
 ]

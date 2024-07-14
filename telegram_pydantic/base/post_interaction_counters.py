@@ -12,10 +12,12 @@ PostInteractionCounters = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PostInteractionCountersMessage,
-            pydantic.Tag('PostInteractionCountersMessage')        ],
+            pydantic.Tag('PostInteractionCountersMessage')
+        ],
         typing.Annotated[
             types.PostInteractionCountersStory,
-            pydantic.Tag('PostInteractionCountersStory')        ]
+            pydantic.Tag('PostInteractionCountersStory')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

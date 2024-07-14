@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StickerPack = typing.Union[
     typing.Annotated[
-            types.StickerPack,
-            pydantic.Tag('StickerPack')        ]
+        types.StickerPack,
+        pydantic.Tag('StickerPack')
+    ]
 ]

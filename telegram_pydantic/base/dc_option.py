@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 DcOption = typing.Union[
     typing.Annotated[
-            types.DcOption,
-            pydantic.Tag('DcOption')        ]
+        types.DcOption,
+        pydantic.Tag('DcOption')
+    ]
 ]

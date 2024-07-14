@@ -12,10 +12,12 @@ GroupCall = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.GroupCall,
-            pydantic.Tag('GroupCall')        ],
+            pydantic.Tag('GroupCall')
+        ],
         typing.Annotated[
             types.GroupCallDiscarded,
-            pydantic.Tag('GroupCallDiscarded')        ]
+            pydantic.Tag('GroupCallDiscarded')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

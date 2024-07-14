@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InputBusinessIntro = typing.Union[
     typing.Annotated[
-            types.InputBusinessIntro,
-            pydantic.Tag('InputBusinessIntro')        ]
+        types.InputBusinessIntro,
+        pydantic.Tag('InputBusinessIntro')
+    ]
 ]

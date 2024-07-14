@@ -12,10 +12,12 @@ PeerLocated = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PeerLocated,
-            pydantic.Tag('PeerLocated')        ],
+            pydantic.Tag('PeerLocated')
+        ],
         typing.Annotated[
             types.PeerSelfLocated,
-            pydantic.Tag('PeerSelfLocated')        ]
+            pydantic.Tag('PeerSelfLocated')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

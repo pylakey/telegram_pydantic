@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MediaAreaCoordinates = typing.Union[
     typing.Annotated[
-            types.MediaAreaCoordinates,
-            pydantic.Tag('MediaAreaCoordinates')        ]
+        types.MediaAreaCoordinates,
+        pydantic.Tag('MediaAreaCoordinates')
+    ]
 ]

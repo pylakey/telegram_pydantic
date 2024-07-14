@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 WebPage = typing.Union[
     typing.Annotated[
-            types.messages.WebPage,
-            pydantic.Tag('messages.WebPage'),
-            pydantic.Tag('WebPage')
-        ]
+        types.messages.WebPage,
+        pydantic.Tag('messages.WebPage'),
+        pydantic.Tag('WebPage')
+    ]
 ]

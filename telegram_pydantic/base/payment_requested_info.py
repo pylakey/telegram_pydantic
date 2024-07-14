@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PaymentRequestedInfo = typing.Union[
     typing.Annotated[
-            types.PaymentRequestedInfo,
-            pydantic.Tag('PaymentRequestedInfo')        ]
+        types.PaymentRequestedInfo,
+        pydantic.Tag('PaymentRequestedInfo')
+    ]
 ]

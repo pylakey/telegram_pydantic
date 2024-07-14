@@ -12,16 +12,20 @@ InputEncryptedFile = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputEncryptedFile,
-            pydantic.Tag('InputEncryptedFile')        ],
+            pydantic.Tag('InputEncryptedFile')
+        ],
         typing.Annotated[
             types.InputEncryptedFileBigUploaded,
-            pydantic.Tag('InputEncryptedFileBigUploaded')        ],
+            pydantic.Tag('InputEncryptedFileBigUploaded')
+        ],
         typing.Annotated[
             types.InputEncryptedFileEmpty,
-            pydantic.Tag('InputEncryptedFileEmpty')        ],
+            pydantic.Tag('InputEncryptedFileEmpty')
+        ],
         typing.Annotated[
             types.InputEncryptedFileUploaded,
-            pydantic.Tag('InputEncryptedFileUploaded')        ]
+            pydantic.Tag('InputEncryptedFileUploaded')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

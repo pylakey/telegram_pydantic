@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 HistoryImport = typing.Union[
     typing.Annotated[
-            types.messages.HistoryImport,
-            pydantic.Tag('messages.HistoryImport'),
-            pydantic.Tag('HistoryImport')
-        ]
+        types.messages.HistoryImport,
+        pydantic.Tag('messages.HistoryImport'),
+        pydantic.Tag('HistoryImport')
+    ]
 ]

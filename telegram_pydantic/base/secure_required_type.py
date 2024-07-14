@@ -12,10 +12,12 @@ SecureRequiredType = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.SecureRequiredType,
-            pydantic.Tag('SecureRequiredType')        ],
+            pydantic.Tag('SecureRequiredType')
+        ],
         typing.Annotated[
             types.SecureRequiredTypeOneOf,
-            pydantic.Tag('SecureRequiredTypeOneOf')        ]
+            pydantic.Tag('SecureRequiredTypeOneOf')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

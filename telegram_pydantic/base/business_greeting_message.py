@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BusinessGreetingMessage = typing.Union[
     typing.Annotated[
-            types.BusinessGreetingMessage,
-            pydantic.Tag('BusinessGreetingMessage')        ]
+        types.BusinessGreetingMessage,
+        pydantic.Tag('BusinessGreetingMessage')
+    ]
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 CodeSettings = typing.Union[
     typing.Annotated[
-            types.CodeSettings,
-            pydantic.Tag('CodeSettings')        ]
+        types.CodeSettings,
+        pydantic.Tag('CodeSettings')
+    ]
 ]

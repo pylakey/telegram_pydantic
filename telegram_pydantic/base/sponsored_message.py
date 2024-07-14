@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SponsoredMessage = typing.Union[
     typing.Annotated[
-            types.SponsoredMessage,
-            pydantic.Tag('SponsoredMessage')        ]
+        types.SponsoredMessage,
+        pydantic.Tag('SponsoredMessage')
+    ]
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StarsStatus = typing.Union[
     typing.Annotated[
-            types.payments.StarsStatus,
-            pydantic.Tag('payments.StarsStatus'),
-            pydantic.Tag('StarsStatus')
-        ]
+        types.payments.StarsStatus,
+        pydantic.Tag('payments.StarsStatus'),
+        pydantic.Tag('StarsStatus')
+    ]
 ]

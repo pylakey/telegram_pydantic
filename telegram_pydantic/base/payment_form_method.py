@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PaymentFormMethod = typing.Union[
     typing.Annotated[
-            types.PaymentFormMethod,
-            pydantic.Tag('PaymentFormMethod')        ]
+        types.PaymentFormMethod,
+        pydantic.Tag('PaymentFormMethod')
+    ]
 ]

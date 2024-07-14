@@ -12,10 +12,12 @@ PublicForward = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PublicForwardMessage,
-            pydantic.Tag('PublicForwardMessage')        ],
+            pydantic.Tag('PublicForwardMessage')
+        ],
         typing.Annotated[
             types.PublicForwardStory,
-            pydantic.Tag('PublicForwardStory')        ]
+            pydantic.Tag('PublicForwardStory')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

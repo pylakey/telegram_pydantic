@@ -12,19 +12,24 @@ AttachMenuPeerType = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.AttachMenuPeerTypeBotPM,
-            pydantic.Tag('AttachMenuPeerTypeBotPM')        ],
+            pydantic.Tag('AttachMenuPeerTypeBotPM')
+        ],
         typing.Annotated[
             types.AttachMenuPeerTypeBroadcast,
-            pydantic.Tag('AttachMenuPeerTypeBroadcast')        ],
+            pydantic.Tag('AttachMenuPeerTypeBroadcast')
+        ],
         typing.Annotated[
             types.AttachMenuPeerTypeChat,
-            pydantic.Tag('AttachMenuPeerTypeChat')        ],
+            pydantic.Tag('AttachMenuPeerTypeChat')
+        ],
         typing.Annotated[
             types.AttachMenuPeerTypePM,
-            pydantic.Tag('AttachMenuPeerTypePM')        ],
+            pydantic.Tag('AttachMenuPeerTypePM')
+        ],
         typing.Annotated[
             types.AttachMenuPeerTypeSameBotPM,
-            pydantic.Tag('AttachMenuPeerTypeSameBotPM')        ]
+            pydantic.Tag('AttachMenuPeerTypeSameBotPM')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

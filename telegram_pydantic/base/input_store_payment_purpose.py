@@ -12,19 +12,24 @@ InputStorePaymentPurpose = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputStorePaymentGiftPremium,
-            pydantic.Tag('InputStorePaymentGiftPremium')        ],
+            pydantic.Tag('InputStorePaymentGiftPremium')
+        ],
         typing.Annotated[
             types.InputStorePaymentPremiumGiftCode,
-            pydantic.Tag('InputStorePaymentPremiumGiftCode')        ],
+            pydantic.Tag('InputStorePaymentPremiumGiftCode')
+        ],
         typing.Annotated[
             types.InputStorePaymentPremiumGiveaway,
-            pydantic.Tag('InputStorePaymentPremiumGiveaway')        ],
+            pydantic.Tag('InputStorePaymentPremiumGiveaway')
+        ],
         typing.Annotated[
             types.InputStorePaymentPremiumSubscription,
-            pydantic.Tag('InputStorePaymentPremiumSubscription')        ],
+            pydantic.Tag('InputStorePaymentPremiumSubscription')
+        ],
         typing.Annotated[
             types.InputStorePaymentStars,
-            pydantic.Tag('InputStorePaymentStars')        ]
+            pydantic.Tag('InputStorePaymentStars')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

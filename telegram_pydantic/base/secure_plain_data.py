@@ -12,10 +12,12 @@ SecurePlainData = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.SecurePlainEmail,
-            pydantic.Tag('SecurePlainEmail')        ],
+            pydantic.Tag('SecurePlainEmail')
+        ],
         typing.Annotated[
             types.SecurePlainPhone,
-            pydantic.Tag('SecurePlainPhone')        ]
+            pydantic.Tag('SecurePlainPhone')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

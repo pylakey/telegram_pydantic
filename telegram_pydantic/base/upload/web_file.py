@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 WebFile = typing.Union[
     typing.Annotated[
-            types.upload.WebFile,
-            pydantic.Tag('upload.WebFile'),
-            pydantic.Tag('WebFile')
-        ]
+        types.upload.WebFile,
+        pydantic.Tag('upload.WebFile'),
+        pydantic.Tag('WebFile')
+    ]
 ]

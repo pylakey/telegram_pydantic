@@ -12,28 +12,36 @@ DocumentAttribute = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.DocumentAttributeAnimated,
-            pydantic.Tag('DocumentAttributeAnimated')        ],
+            pydantic.Tag('DocumentAttributeAnimated')
+        ],
         typing.Annotated[
             types.DocumentAttributeAudio,
-            pydantic.Tag('DocumentAttributeAudio')        ],
+            pydantic.Tag('DocumentAttributeAudio')
+        ],
         typing.Annotated[
             types.DocumentAttributeCustomEmoji,
-            pydantic.Tag('DocumentAttributeCustomEmoji')        ],
+            pydantic.Tag('DocumentAttributeCustomEmoji')
+        ],
         typing.Annotated[
             types.DocumentAttributeFilename,
-            pydantic.Tag('DocumentAttributeFilename')        ],
+            pydantic.Tag('DocumentAttributeFilename')
+        ],
         typing.Annotated[
             types.DocumentAttributeHasStickers,
-            pydantic.Tag('DocumentAttributeHasStickers')        ],
+            pydantic.Tag('DocumentAttributeHasStickers')
+        ],
         typing.Annotated[
             types.DocumentAttributeImageSize,
-            pydantic.Tag('DocumentAttributeImageSize')        ],
+            pydantic.Tag('DocumentAttributeImageSize')
+        ],
         typing.Annotated[
             types.DocumentAttributeSticker,
-            pydantic.Tag('DocumentAttributeSticker')        ],
+            pydantic.Tag('DocumentAttributeSticker')
+        ],
         typing.Annotated[
             types.DocumentAttributeVideo,
-            pydantic.Tag('DocumentAttributeVideo')        ]
+            pydantic.Tag('DocumentAttributeVideo')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

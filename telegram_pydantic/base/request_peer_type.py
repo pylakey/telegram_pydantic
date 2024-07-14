@@ -12,13 +12,16 @@ RequestPeerType = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.RequestPeerTypeBroadcast,
-            pydantic.Tag('RequestPeerTypeBroadcast')        ],
+            pydantic.Tag('RequestPeerTypeBroadcast')
+        ],
         typing.Annotated[
             types.RequestPeerTypeChat,
-            pydantic.Tag('RequestPeerTypeChat')        ],
+            pydantic.Tag('RequestPeerTypeChat')
+        ],
         typing.Annotated[
             types.RequestPeerTypeUser,
-            pydantic.Tag('RequestPeerTypeUser')        ]
+            pydantic.Tag('RequestPeerTypeUser')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

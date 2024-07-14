@@ -12,13 +12,16 @@ InputChannel = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputChannel,
-            pydantic.Tag('InputChannel')        ],
+            pydantic.Tag('InputChannel')
+        ],
         typing.Annotated[
             types.InputChannelEmpty,
-            pydantic.Tag('InputChannelEmpty')        ],
+            pydantic.Tag('InputChannelEmpty')
+        ],
         typing.Annotated[
             types.InputChannelFromMessage,
-            pydantic.Tag('InputChannelFromMessage')        ]
+            pydantic.Tag('InputChannelFromMessage')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

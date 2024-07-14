@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MessageFwdHeader = typing.Union[
     typing.Annotated[
-            types.MessageFwdHeader,
-            pydantic.Tag('MessageFwdHeader')        ]
+        types.MessageFwdHeader,
+        pydantic.Tag('MessageFwdHeader')
+    ]
 ]

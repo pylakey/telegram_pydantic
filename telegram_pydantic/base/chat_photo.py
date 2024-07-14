@@ -12,10 +12,12 @@ ChatPhoto = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChatPhoto,
-            pydantic.Tag('ChatPhoto')        ],
+            pydantic.Tag('ChatPhoto')
+        ],
         typing.Annotated[
             types.ChatPhotoEmpty,
-            pydantic.Tag('ChatPhotoEmpty')        ]
+            pydantic.Tag('ChatPhotoEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

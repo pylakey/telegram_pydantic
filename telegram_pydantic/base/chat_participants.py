@@ -12,10 +12,12 @@ ChatParticipants = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChatParticipants,
-            pydantic.Tag('ChatParticipants')        ],
+            pydantic.Tag('ChatParticipants')
+        ],
         typing.Annotated[
             types.ChatParticipantsForbidden,
-            pydantic.Tag('ChatParticipantsForbidden')        ]
+            pydantic.Tag('ChatParticipantsForbidden')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

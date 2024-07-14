@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ReadParticipantDate = typing.Union[
     typing.Annotated[
-            types.ReadParticipantDate,
-            pydantic.Tag('ReadParticipantDate')        ]
+        types.ReadParticipantDate,
+        pydantic.Tag('ReadParticipantDate')
+    ]
 ]

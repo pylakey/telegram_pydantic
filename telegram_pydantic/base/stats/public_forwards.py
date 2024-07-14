@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PublicForwards = typing.Union[
     typing.Annotated[
-            types.stats.PublicForwards,
-            pydantic.Tag('stats.PublicForwards'),
-            pydantic.Tag('PublicForwards')
-        ]
+        types.stats.PublicForwards,
+        pydantic.Tag('stats.PublicForwards'),
+        pydantic.Tag('PublicForwards')
+    ]
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MessagePeerReaction = typing.Union[
     typing.Annotated[
-            types.MessagePeerReaction,
-            pydantic.Tag('MessagePeerReaction')        ]
+        types.MessagePeerReaction,
+        pydantic.Tag('MessagePeerReaction')
+    ]
 ]

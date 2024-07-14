@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MegagroupStats = typing.Union[
     typing.Annotated[
-            types.stats.MegagroupStats,
-            pydantic.Tag('stats.MegagroupStats'),
-            pydantic.Tag('MegagroupStats')
-        ]
+        types.stats.MegagroupStats,
+        pydantic.Tag('stats.MegagroupStats'),
+        pydantic.Tag('MegagroupStats')
+    ]
 ]

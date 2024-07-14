@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AutoDownloadSettings = typing.Union[
     typing.Annotated[
-            types.AutoDownloadSettings,
-            pydantic.Tag('AutoDownloadSettings')        ]
+        types.AutoDownloadSettings,
+        pydantic.Tag('AutoDownloadSettings')
+    ]
 ]

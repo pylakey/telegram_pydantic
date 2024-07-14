@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AffectedFoundMessages = typing.Union[
     typing.Annotated[
-            types.messages.AffectedFoundMessages,
-            pydantic.Tag('messages.AffectedFoundMessages'),
-            pydantic.Tag('AffectedFoundMessages')
-        ]
+        types.messages.AffectedFoundMessages,
+        pydantic.Tag('messages.AffectedFoundMessages'),
+        pydantic.Tag('AffectedFoundMessages')
+    ]
 ]

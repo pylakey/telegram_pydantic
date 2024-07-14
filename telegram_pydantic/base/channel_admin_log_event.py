@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ChannelAdminLogEvent = typing.Union[
     typing.Annotated[
-            types.ChannelAdminLogEvent,
-            pydantic.Tag('ChannelAdminLogEvent')        ]
+        types.ChannelAdminLogEvent,
+        pydantic.Tag('ChannelAdminLogEvent')
+    ]
 ]

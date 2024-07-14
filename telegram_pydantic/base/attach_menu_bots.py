@@ -12,10 +12,12 @@ AttachMenuBots = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.AttachMenuBots,
-            pydantic.Tag('AttachMenuBots')        ],
+            pydantic.Tag('AttachMenuBots')
+        ],
         typing.Annotated[
             types.AttachMenuBotsNotModified,
-            pydantic.Tag('AttachMenuBotsNotModified')        ]
+            pydantic.Tag('AttachMenuBotsNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

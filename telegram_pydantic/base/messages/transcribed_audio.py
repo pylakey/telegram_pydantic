@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 TranscribedAudio = typing.Union[
     typing.Annotated[
-            types.messages.TranscribedAudio,
-            pydantic.Tag('messages.TranscribedAudio'),
-            pydantic.Tag('TranscribedAudio')
-        ]
+        types.messages.TranscribedAudio,
+        pydantic.Tag('messages.TranscribedAudio'),
+        pydantic.Tag('TranscribedAudio')
+    ]
 ]

@@ -12,10 +12,12 @@ Document = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.Document,
-            pydantic.Tag('Document')        ],
+            pydantic.Tag('Document')
+        ],
         typing.Annotated[
             types.DocumentEmpty,
-            pydantic.Tag('DocumentEmpty')        ]
+            pydantic.Tag('DocumentEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

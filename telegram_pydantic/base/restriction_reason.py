@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 RestrictionReason = typing.Union[
     typing.Annotated[
-            types.RestrictionReason,
-            pydantic.Tag('RestrictionReason')        ]
+        types.RestrictionReason,
+        pydantic.Tag('RestrictionReason')
+    ]
 ]

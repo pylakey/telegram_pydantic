@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SimpleWebViewResult = typing.Union[
     typing.Annotated[
-            types.SimpleWebViewResultUrl,
-            pydantic.Tag('SimpleWebViewResultUrl')        ]
+        types.SimpleWebViewResultUrl,
+        pydantic.Tag('SimpleWebViewResultUrl')
+    ]
 ]

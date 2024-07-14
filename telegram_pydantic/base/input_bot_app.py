@@ -12,10 +12,12 @@ InputBotApp = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputBotAppID,
-            pydantic.Tag('InputBotAppID')        ],
+            pydantic.Tag('InputBotAppID')
+        ],
         typing.Annotated[
             types.InputBotAppShortName,
-            pydantic.Tag('InputBotAppShortName')        ]
+            pydantic.Tag('InputBotAppShortName')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

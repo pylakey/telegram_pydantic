@@ -12,10 +12,12 @@ InputDialogPeer = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputDialogPeer,
-            pydantic.Tag('InputDialogPeer')        ],
+            pydantic.Tag('InputDialogPeer')
+        ],
         typing.Annotated[
             types.InputDialogPeerFolder,
-            pydantic.Tag('InputDialogPeerFolder')        ]
+            pydantic.Tag('InputDialogPeerFolder')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

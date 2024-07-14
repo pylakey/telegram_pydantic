@@ -12,10 +12,12 @@ ChatFull = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChannelFull,
-            pydantic.Tag('ChannelFull')        ],
+            pydantic.Tag('ChannelFull')
+        ],
         typing.Annotated[
             types.ChatFull,
-            pydantic.Tag('ChatFull')        ]
+            pydantic.Tag('ChatFull')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

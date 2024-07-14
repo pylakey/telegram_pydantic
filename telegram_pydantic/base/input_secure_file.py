@@ -12,10 +12,12 @@ InputSecureFile = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputSecureFile,
-            pydantic.Tag('InputSecureFile')        ],
+            pydantic.Tag('InputSecureFile')
+        ],
         typing.Annotated[
             types.InputSecureFileUploaded,
-            pydantic.Tag('InputSecureFileUploaded')        ]
+            pydantic.Tag('InputSecureFileUploaded')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

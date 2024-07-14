@@ -12,10 +12,12 @@ User = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.User,
-            pydantic.Tag('User')        ],
+            pydantic.Tag('User')
+        ],
         typing.Annotated[
             types.UserEmpty,
-            pydantic.Tag('UserEmpty')        ]
+            pydantic.Tag('UserEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

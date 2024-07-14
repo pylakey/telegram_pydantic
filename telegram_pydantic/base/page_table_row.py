@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PageTableRow = typing.Union[
     typing.Annotated[
-            types.PageTableRow,
-            pydantic.Tag('PageTableRow')        ]
+        types.PageTableRow,
+        pydantic.Tag('PageTableRow')
+    ]
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 TranslatedText = typing.Union[
     typing.Annotated[
-            types.messages.TranslateResult,
-            pydantic.Tag('messages.TranslateResult'),
-            pydantic.Tag('TranslateResult')
-        ]
+        types.messages.TranslateResult,
+        pydantic.Tag('messages.TranslateResult'),
+        pydantic.Tag('TranslateResult')
+    ]
 ]

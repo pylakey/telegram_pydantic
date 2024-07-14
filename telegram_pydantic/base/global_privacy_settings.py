@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 GlobalPrivacySettings = typing.Union[
     typing.Annotated[
-            types.GlobalPrivacySettings,
-            pydantic.Tag('GlobalPrivacySettings')        ]
+        types.GlobalPrivacySettings,
+        pydantic.Tag('GlobalPrivacySettings')
+    ]
 ]

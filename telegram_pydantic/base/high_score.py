@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 HighScore = typing.Union[
     typing.Annotated[
-            types.HighScore,
-            pydantic.Tag('HighScore')        ]
+        types.HighScore,
+        pydantic.Tag('HighScore')
+    ]
 ]

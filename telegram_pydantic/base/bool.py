@@ -12,10 +12,12 @@ Bool = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.BoolFalse,
-            pydantic.Tag('BoolFalse')        ],
+            pydantic.Tag('BoolFalse')
+        ],
         typing.Annotated[
             types.BoolTrue,
-            pydantic.Tag('BoolTrue')        ]
+            pydantic.Tag('BoolTrue')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

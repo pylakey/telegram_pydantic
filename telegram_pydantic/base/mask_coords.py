@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MaskCoords = typing.Union[
     typing.Annotated[
-            types.MaskCoords,
-            pydantic.Tag('MaskCoords')        ]
+        types.MaskCoords,
+        pydantic.Tag('MaskCoords')
+    ]
 ]

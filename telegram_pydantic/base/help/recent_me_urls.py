@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 RecentMeUrls = typing.Union[
     typing.Annotated[
-            types.help.RecentMeUrls,
-            pydantic.Tag('help.RecentMeUrls'),
-            pydantic.Tag('RecentMeUrls')
-        ]
+        types.help.RecentMeUrls,
+        pydantic.Tag('help.RecentMeUrls'),
+        pydantic.Tag('RecentMeUrls')
+    ]
 ]

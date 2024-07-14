@@ -12,13 +12,16 @@ DialogFilter = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.DialogFilter,
-            pydantic.Tag('DialogFilter')        ],
+            pydantic.Tag('DialogFilter')
+        ],
         typing.Annotated[
             types.DialogFilterChatlist,
-            pydantic.Tag('DialogFilterChatlist')        ],
+            pydantic.Tag('DialogFilterChatlist')
+        ],
         typing.Annotated[
             types.DialogFilterDefault,
-            pydantic.Tag('DialogFilterDefault')        ]
+            pydantic.Tag('DialogFilterDefault')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

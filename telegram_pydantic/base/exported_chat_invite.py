@@ -12,10 +12,12 @@ ExportedChatInvite = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChatInviteExported,
-            pydantic.Tag('ChatInviteExported')        ],
+            pydantic.Tag('ChatInviteExported')
+        ],
         typing.Annotated[
             types.ChatInvitePublicJoinRequests,
-            pydantic.Tag('ChatInvitePublicJoinRequests')        ]
+            pydantic.Tag('ChatInvitePublicJoinRequests')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 LabeledPrice = typing.Union[
     typing.Annotated[
-            types.LabeledPrice,
-            pydantic.Tag('LabeledPrice')        ]
+        types.LabeledPrice,
+        pydantic.Tag('LabeledPrice')
+    ]
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SendAsPeer = typing.Union[
     typing.Annotated[
-            types.SendAsPeer,
-            pydantic.Tag('SendAsPeer')        ]
+        types.SendAsPeer,
+        pydantic.Tag('SendAsPeer')
+    ]
 ]

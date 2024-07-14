@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ExportedInvoice = typing.Union[
     typing.Annotated[
-            types.payments.ExportedInvoice,
-            pydantic.Tag('payments.ExportedInvoice'),
-            pydantic.Tag('ExportedInvoice')
-        ]
+        types.payments.ExportedInvoice,
+        pydantic.Tag('payments.ExportedInvoice'),
+        pydantic.Tag('ExportedInvoice')
+    ]
 ]

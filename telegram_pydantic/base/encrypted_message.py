@@ -12,10 +12,12 @@ EncryptedMessage = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.EncryptedMessage,
-            pydantic.Tag('EncryptedMessage')        ],
+            pydantic.Tag('EncryptedMessage')
+        ],
         typing.Annotated[
             types.EncryptedMessageService,
-            pydantic.Tag('EncryptedMessageService')        ]
+            pydantic.Tag('EncryptedMessageService')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

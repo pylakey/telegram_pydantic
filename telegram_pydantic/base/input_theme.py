@@ -12,10 +12,12 @@ InputTheme = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputTheme,
-            pydantic.Tag('InputTheme')        ],
+            pydantic.Tag('InputTheme')
+        ],
         typing.Annotated[
             types.InputThemeSlug,
-            pydantic.Tag('InputThemeSlug')        ]
+            pydantic.Tag('InputThemeSlug')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

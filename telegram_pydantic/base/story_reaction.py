@@ -12,13 +12,16 @@ StoryReaction = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.StoryReaction,
-            pydantic.Tag('StoryReaction')        ],
+            pydantic.Tag('StoryReaction')
+        ],
         typing.Annotated[
             types.StoryReactionPublicForward,
-            pydantic.Tag('StoryReactionPublicForward')        ],
+            pydantic.Tag('StoryReactionPublicForward')
+        ],
         typing.Annotated[
             types.StoryReactionPublicRepost,
-            pydantic.Tag('StoryReactionPublicRepost')        ]
+            pydantic.Tag('StoryReactionPublicRepost')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Page = typing.Union[
     typing.Annotated[
-            types.Page,
-            pydantic.Tag('Page')        ]
+        types.Page,
+        pydantic.Tag('Page')
+    ]
 ]

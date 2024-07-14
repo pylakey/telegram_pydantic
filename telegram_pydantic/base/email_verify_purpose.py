@@ -12,13 +12,16 @@ EmailVerifyPurpose = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.EmailVerifyPurposeLoginChange,
-            pydantic.Tag('EmailVerifyPurposeLoginChange')        ],
+            pydantic.Tag('EmailVerifyPurposeLoginChange')
+        ],
         typing.Annotated[
             types.EmailVerifyPurposeLoginSetup,
-            pydantic.Tag('EmailVerifyPurposeLoginSetup')        ],
+            pydantic.Tag('EmailVerifyPurposeLoginSetup')
+        ],
         typing.Annotated[
             types.EmailVerifyPurposePassport,
-            pydantic.Tag('EmailVerifyPurposePassport')        ]
+            pydantic.Tag('EmailVerifyPurposePassport')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

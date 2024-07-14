@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BankCardData = typing.Union[
     typing.Annotated[
-            types.payments.BankCardData,
-            pydantic.Tag('payments.BankCardData'),
-            pydantic.Tag('BankCardData')
-        ]
+        types.payments.BankCardData,
+        pydantic.Tag('payments.BankCardData'),
+        pydantic.Tag('BankCardData')
+    ]
 ]

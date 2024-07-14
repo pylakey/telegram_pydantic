@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Poll = typing.Union[
     typing.Annotated[
-            types.Poll,
-            pydantic.Tag('Poll')        ]
+        types.Poll,
+        pydantic.Tag('Poll')
+    ]
 ]

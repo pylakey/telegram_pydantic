@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SearchResultsPosition = typing.Union[
     typing.Annotated[
-            types.SearchResultPosition,
-            pydantic.Tag('SearchResultPosition')        ]
+        types.SearchResultPosition,
+        pydantic.Tag('SearchResultPosition')
+    ]
 ]

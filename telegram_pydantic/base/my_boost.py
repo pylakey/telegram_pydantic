@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MyBoost = typing.Union[
     typing.Annotated[
-            types.MyBoost,
-            pydantic.Tag('MyBoost')        ]
+        types.MyBoost,
+        pydantic.Tag('MyBoost')
+    ]
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Contact = typing.Union[
     typing.Annotated[
-            types.Contact,
-            pydantic.Tag('Contact')        ]
+        types.Contact,
+        pydantic.Tag('Contact')
+    ]
 ]

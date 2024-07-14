@@ -12,19 +12,24 @@ RecentMeUrl = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.RecentMeUrlChat,
-            pydantic.Tag('RecentMeUrlChat')        ],
+            pydantic.Tag('RecentMeUrlChat')
+        ],
         typing.Annotated[
             types.RecentMeUrlChatInvite,
-            pydantic.Tag('RecentMeUrlChatInvite')        ],
+            pydantic.Tag('RecentMeUrlChatInvite')
+        ],
         typing.Annotated[
             types.RecentMeUrlStickerSet,
-            pydantic.Tag('RecentMeUrlStickerSet')        ],
+            pydantic.Tag('RecentMeUrlStickerSet')
+        ],
         typing.Annotated[
             types.RecentMeUrlUnknown,
-            pydantic.Tag('RecentMeUrlUnknown')        ],
+            pydantic.Tag('RecentMeUrlUnknown')
+        ],
         typing.Annotated[
             types.RecentMeUrlUser,
-            pydantic.Tag('RecentMeUrlUser')        ]
+            pydantic.Tag('RecentMeUrlUser')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

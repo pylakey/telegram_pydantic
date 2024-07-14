@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 CollectibleInfo = typing.Union[
     typing.Annotated[
-            types.fragment.CollectibleInfo,
-            pydantic.Tag('fragment.CollectibleInfo'),
-            pydantic.Tag('CollectibleInfo')
-        ]
+        types.fragment.CollectibleInfo,
+        pydantic.Tag('fragment.CollectibleInfo'),
+        pydantic.Tag('CollectibleInfo')
+    ]
 ]

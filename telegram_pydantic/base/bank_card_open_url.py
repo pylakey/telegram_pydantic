@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BankCardOpenUrl = typing.Union[
     typing.Annotated[
-            types.BankCardOpenUrl,
-            pydantic.Tag('BankCardOpenUrl')        ]
+        types.BankCardOpenUrl,
+        pydantic.Tag('BankCardOpenUrl')
+    ]
 ]

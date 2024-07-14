@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InputAppEvent = typing.Union[
     typing.Annotated[
-            types.InputAppEvent,
-            pydantic.Tag('InputAppEvent')        ]
+        types.InputAppEvent,
+        pydantic.Tag('InputAppEvent')
+    ]
 ]

@@ -12,28 +12,36 @@ TopPeerCategory = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.TopPeerCategoryBotsInline,
-            pydantic.Tag('TopPeerCategoryBotsInline')        ],
+            pydantic.Tag('TopPeerCategoryBotsInline')
+        ],
         typing.Annotated[
             types.TopPeerCategoryBotsPM,
-            pydantic.Tag('TopPeerCategoryBotsPM')        ],
+            pydantic.Tag('TopPeerCategoryBotsPM')
+        ],
         typing.Annotated[
             types.TopPeerCategoryChannels,
-            pydantic.Tag('TopPeerCategoryChannels')        ],
+            pydantic.Tag('TopPeerCategoryChannels')
+        ],
         typing.Annotated[
             types.TopPeerCategoryCorrespondents,
-            pydantic.Tag('TopPeerCategoryCorrespondents')        ],
+            pydantic.Tag('TopPeerCategoryCorrespondents')
+        ],
         typing.Annotated[
             types.TopPeerCategoryForwardChats,
-            pydantic.Tag('TopPeerCategoryForwardChats')        ],
+            pydantic.Tag('TopPeerCategoryForwardChats')
+        ],
         typing.Annotated[
             types.TopPeerCategoryForwardUsers,
-            pydantic.Tag('TopPeerCategoryForwardUsers')        ],
+            pydantic.Tag('TopPeerCategoryForwardUsers')
+        ],
         typing.Annotated[
             types.TopPeerCategoryGroups,
-            pydantic.Tag('TopPeerCategoryGroups')        ],
+            pydantic.Tag('TopPeerCategoryGroups')
+        ],
         typing.Annotated[
             types.TopPeerCategoryPhoneCalls,
-            pydantic.Tag('TopPeerCategoryPhoneCalls')        ]
+            pydantic.Tag('TopPeerCategoryPhoneCalls')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

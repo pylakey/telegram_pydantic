@@ -12,13 +12,16 @@ Message = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.Message,
-            pydantic.Tag('Message')        ],
+            pydantic.Tag('Message')
+        ],
         typing.Annotated[
             types.MessageEmpty,
-            pydantic.Tag('MessageEmpty')        ],
+            pydantic.Tag('MessageEmpty')
+        ],
         typing.Annotated[
             types.MessageService,
-            pydantic.Tag('MessageService')        ]
+            pydantic.Tag('MessageService')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

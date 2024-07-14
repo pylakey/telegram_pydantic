@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ContentSettings = typing.Union[
     typing.Annotated[
-            types.account.ContentSettings,
-            pydantic.Tag('account.ContentSettings'),
-            pydantic.Tag('ContentSettings')
-        ]
+        types.account.ContentSettings,
+        pydantic.Tag('account.ContentSettings'),
+        pydantic.Tag('ContentSettings')
+    ]
 ]

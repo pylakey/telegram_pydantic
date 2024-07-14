@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InputStickerSetItem = typing.Union[
     typing.Annotated[
-            types.InputStickerSetItem,
-            pydantic.Tag('InputStickerSetItem')        ]
+        types.InputStickerSetItem,
+        pydantic.Tag('InputStickerSetItem')
+    ]
 ]

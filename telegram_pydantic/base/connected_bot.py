@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ConnectedBot = typing.Union[
     typing.Annotated[
-            types.ConnectedBot,
-            pydantic.Tag('ConnectedBot')        ]
+        types.ConnectedBot,
+        pydantic.Tag('ConnectedBot')
+    ]
 ]

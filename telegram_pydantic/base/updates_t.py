@@ -12,25 +12,32 @@ Updates = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.UpdateShort,
-            pydantic.Tag('UpdateShort')        ],
+            pydantic.Tag('UpdateShort')
+        ],
         typing.Annotated[
             types.UpdateShortChatMessage,
-            pydantic.Tag('UpdateShortChatMessage')        ],
+            pydantic.Tag('UpdateShortChatMessage')
+        ],
         typing.Annotated[
             types.UpdateShortMessage,
-            pydantic.Tag('UpdateShortMessage')        ],
+            pydantic.Tag('UpdateShortMessage')
+        ],
         typing.Annotated[
             types.UpdateShortSentMessage,
-            pydantic.Tag('UpdateShortSentMessage')        ],
+            pydantic.Tag('UpdateShortSentMessage')
+        ],
         typing.Annotated[
             types.Updates,
-            pydantic.Tag('Updates')        ],
+            pydantic.Tag('Updates')
+        ],
         typing.Annotated[
             types.UpdatesCombined,
-            pydantic.Tag('UpdatesCombined')        ],
+            pydantic.Tag('UpdatesCombined')
+        ],
         typing.Annotated[
             types.UpdatesTooLong,
-            pydantic.Tag('UpdatesTooLong')        ]
+            pydantic.Tag('UpdatesTooLong')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

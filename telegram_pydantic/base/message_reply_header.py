@@ -12,10 +12,12 @@ MessageReplyHeader = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.MessageReplyHeader,
-            pydantic.Tag('MessageReplyHeader')        ],
+            pydantic.Tag('MessageReplyHeader')
+        ],
         typing.Annotated[
             types.MessageReplyStoryHeader,
-            pydantic.Tag('MessageReplyStoryHeader')        ]
+            pydantic.Tag('MessageReplyStoryHeader')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

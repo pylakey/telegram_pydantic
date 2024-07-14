@@ -12,19 +12,24 @@ BaseTheme = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.BaseThemeArctic,
-            pydantic.Tag('BaseThemeArctic')        ],
+            pydantic.Tag('BaseThemeArctic')
+        ],
         typing.Annotated[
             types.BaseThemeClassic,
-            pydantic.Tag('BaseThemeClassic')        ],
+            pydantic.Tag('BaseThemeClassic')
+        ],
         typing.Annotated[
             types.BaseThemeDay,
-            pydantic.Tag('BaseThemeDay')        ],
+            pydantic.Tag('BaseThemeDay')
+        ],
         typing.Annotated[
             types.BaseThemeNight,
-            pydantic.Tag('BaseThemeNight')        ],
+            pydantic.Tag('BaseThemeNight')
+        ],
         typing.Annotated[
             types.BaseThemeTinted,
-            pydantic.Tag('BaseThemeTinted')        ]
+            pydantic.Tag('BaseThemeTinted')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

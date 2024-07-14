@@ -12,10 +12,12 @@ InputGeoPoint = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputGeoPoint,
-            pydantic.Tag('InputGeoPoint')        ],
+            pydantic.Tag('InputGeoPoint')
+        ],
         typing.Annotated[
             types.InputGeoPointEmpty,
-            pydantic.Tag('InputGeoPointEmpty')        ]
+            pydantic.Tag('InputGeoPointEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -12,10 +12,12 @@ PasswordKdfAlgo = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PasswordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow,
-            pydantic.Tag('PasswordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow')        ],
+            pydantic.Tag('PasswordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow')
+        ],
         typing.Annotated[
             types.PasswordKdfAlgoUnknown,
-            pydantic.Tag('PasswordKdfAlgoUnknown')        ]
+            pydantic.Tag('PasswordKdfAlgoUnknown')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

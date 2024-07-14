@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AttachMenuBotsBot = typing.Union[
     typing.Annotated[
-            types.AttachMenuBotsBot,
-            pydantic.Tag('AttachMenuBotsBot')        ]
+        types.AttachMenuBotsBot,
+        pydantic.Tag('AttachMenuBotsBot')
+    ]
 ]

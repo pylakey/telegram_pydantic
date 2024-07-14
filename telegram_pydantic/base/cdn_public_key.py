@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 CdnPublicKey = typing.Union[
     typing.Annotated[
-            types.CdnPublicKey,
-            pydantic.Tag('CdnPublicKey')        ]
+        types.CdnPublicKey,
+        pydantic.Tag('CdnPublicKey')
+    ]
 ]

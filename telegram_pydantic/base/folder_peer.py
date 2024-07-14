@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 FolderPeer = typing.Union[
     typing.Annotated[
-            types.FolderPeer,
-            pydantic.Tag('FolderPeer')        ]
+        types.FolderPeer,
+        pydantic.Tag('FolderPeer')
+    ]
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PasswordRecovery = typing.Union[
     typing.Annotated[
-            types.auth.PasswordRecovery,
-            pydantic.Tag('auth.PasswordRecovery'),
-            pydantic.Tag('PasswordRecovery')
-        ]
+        types.auth.PasswordRecovery,
+        pydantic.Tag('auth.PasswordRecovery'),
+        pydantic.Tag('PasswordRecovery')
+    ]
 ]

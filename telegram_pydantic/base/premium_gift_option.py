@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PremiumGiftOption = typing.Union[
     typing.Annotated[
-            types.PremiumGiftOption,
-            pydantic.Tag('PremiumGiftOption')        ]
+        types.PremiumGiftOption,
+        pydantic.Tag('PremiumGiftOption')
+    ]
 ]

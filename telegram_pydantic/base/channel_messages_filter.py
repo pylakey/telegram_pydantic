@@ -12,10 +12,12 @@ ChannelMessagesFilter = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChannelMessagesFilter,
-            pydantic.Tag('ChannelMessagesFilter')        ],
+            pydantic.Tag('ChannelMessagesFilter')
+        ],
         typing.Annotated[
             types.ChannelMessagesFilterEmpty,
-            pydantic.Tag('ChannelMessagesFilterEmpty')        ]
+            pydantic.Tag('ChannelMessagesFilterEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

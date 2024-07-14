@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BusinessWeeklyOpen = typing.Union[
     typing.Annotated[
-            types.BusinessWeeklyOpen,
-            pydantic.Tag('BusinessWeeklyOpen')        ]
+        types.BusinessWeeklyOpen,
+        pydantic.Tag('BusinessWeeklyOpen')
+    ]
 ]

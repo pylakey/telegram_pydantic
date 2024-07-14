@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StickerKeyword = typing.Union[
     typing.Annotated[
-            types.StickerKeyword,
-            pydantic.Tag('StickerKeyword')        ]
+        types.StickerKeyword,
+        pydantic.Tag('StickerKeyword')
+    ]
 ]

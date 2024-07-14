@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ChatBannedRights = typing.Union[
     typing.Annotated[
-            types.ChatBannedRights,
-            pydantic.Tag('ChatBannedRights')        ]
+        types.ChatBannedRights,
+        pydantic.Tag('ChatBannedRights')
+    ]
 ]

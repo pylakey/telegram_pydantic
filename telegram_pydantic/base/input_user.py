@@ -12,16 +12,20 @@ InputUser = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputUser,
-            pydantic.Tag('InputUser')        ],
+            pydantic.Tag('InputUser')
+        ],
         typing.Annotated[
             types.InputUserEmpty,
-            pydantic.Tag('InputUserEmpty')        ],
+            pydantic.Tag('InputUserEmpty')
+        ],
         typing.Annotated[
             types.InputUserFromMessage,
-            pydantic.Tag('InputUserFromMessage')        ],
+            pydantic.Tag('InputUserFromMessage')
+        ],
         typing.Annotated[
             types.InputUserSelf,
-            pydantic.Tag('InputUserSelf')        ]
+            pydantic.Tag('InputUserSelf')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

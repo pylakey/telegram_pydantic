@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 DialogFilterSuggested = typing.Union[
     typing.Annotated[
-            types.DialogFilterSuggested,
-            pydantic.Tag('DialogFilterSuggested')        ]
+        types.DialogFilterSuggested,
+        pydantic.Tag('DialogFilterSuggested')
+    ]
 ]

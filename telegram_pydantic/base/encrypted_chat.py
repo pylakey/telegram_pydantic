@@ -12,19 +12,24 @@ EncryptedChat = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.EncryptedChat,
-            pydantic.Tag('EncryptedChat')        ],
+            pydantic.Tag('EncryptedChat')
+        ],
         typing.Annotated[
             types.EncryptedChatDiscarded,
-            pydantic.Tag('EncryptedChatDiscarded')        ],
+            pydantic.Tag('EncryptedChatDiscarded')
+        ],
         typing.Annotated[
             types.EncryptedChatEmpty,
-            pydantic.Tag('EncryptedChatEmpty')        ],
+            pydantic.Tag('EncryptedChatEmpty')
+        ],
         typing.Annotated[
             types.EncryptedChatRequested,
-            pydantic.Tag('EncryptedChatRequested')        ],
+            pydantic.Tag('EncryptedChatRequested')
+        ],
         typing.Annotated[
             types.EncryptedChatWaiting,
-            pydantic.Tag('EncryptedChatWaiting')        ]
+            pydantic.Tag('EncryptedChatWaiting')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -12,13 +12,16 @@ EmojiStatus = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.EmojiStatus,
-            pydantic.Tag('EmojiStatus')        ],
+            pydantic.Tag('EmojiStatus')
+        ],
         typing.Annotated[
             types.EmojiStatusEmpty,
-            pydantic.Tag('EmojiStatusEmpty')        ],
+            pydantic.Tag('EmojiStatusEmpty')
+        ],
         typing.Annotated[
             types.EmojiStatusUntil,
-            pydantic.Tag('EmojiStatusUntil')        ]
+            pydantic.Tag('EmojiStatusUntil')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

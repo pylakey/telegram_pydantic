@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MessageEditData = typing.Union[
     typing.Annotated[
-            types.messages.MessageEditData,
-            pydantic.Tag('messages.MessageEditData'),
-            pydantic.Tag('MessageEditData')
-        ]
+        types.messages.MessageEditData,
+        pydantic.Tag('messages.MessageEditData'),
+        pydantic.Tag('MessageEditData')
+    ]
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 JoinAsPeers = typing.Union[
     typing.Annotated[
-            types.phone.JoinAsPeers,
-            pydantic.Tag('phone.JoinAsPeers'),
-            pydantic.Tag('JoinAsPeers')
-        ]
+        types.phone.JoinAsPeers,
+        pydantic.Tag('phone.JoinAsPeers'),
+        pydantic.Tag('JoinAsPeers')
+    ]
 ]

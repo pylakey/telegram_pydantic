@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PeerDialogs = typing.Union[
     typing.Annotated[
-            types.messages.PeerDialogs,
-            pydantic.Tag('messages.PeerDialogs'),
-            pydantic.Tag('PeerDialogs')
-        ]
+        types.messages.PeerDialogs,
+        pydantic.Tag('messages.PeerDialogs'),
+        pydantic.Tag('PeerDialogs')
+    ]
 ]

@@ -12,10 +12,12 @@ MessageExtendedMedia = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.MessageExtendedMedia,
-            pydantic.Tag('MessageExtendedMedia')        ],
+            pydantic.Tag('MessageExtendedMedia')
+        ],
         typing.Annotated[
             types.MessageExtendedMediaPreview,
-            pydantic.Tag('MessageExtendedMediaPreview')        ]
+            pydantic.Tag('MessageExtendedMediaPreview')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

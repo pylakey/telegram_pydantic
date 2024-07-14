@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InactiveChats = typing.Union[
     typing.Annotated[
-            types.messages.InactiveChats,
-            pydantic.Tag('messages.InactiveChats'),
-            pydantic.Tag('InactiveChats')
-        ]
+        types.messages.InactiveChats,
+        pydantic.Tag('messages.InactiveChats'),
+        pydantic.Tag('InactiveChats')
+    ]
 ]

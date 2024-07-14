@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PageCaption = typing.Union[
     typing.Annotated[
-            types.PageCaption,
-            pydantic.Tag('PageCaption')        ]
+        types.PageCaption,
+        pydantic.Tag('PageCaption')
+    ]
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Password = typing.Union[
     typing.Annotated[
-            types.account.Password,
-            pydantic.Tag('account.Password'),
-            pydantic.Tag('Password')
-        ]
+        types.account.Password,
+        pydantic.Tag('account.Password'),
+        pydantic.Tag('Password')
+    ]
 ]

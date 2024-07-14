@@ -12,25 +12,32 @@ BotCommandScope = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.BotCommandScopeChatAdmins,
-            pydantic.Tag('BotCommandScopeChatAdmins')        ],
+            pydantic.Tag('BotCommandScopeChatAdmins')
+        ],
         typing.Annotated[
             types.BotCommandScopeChats,
-            pydantic.Tag('BotCommandScopeChats')        ],
+            pydantic.Tag('BotCommandScopeChats')
+        ],
         typing.Annotated[
             types.BotCommandScopeDefault,
-            pydantic.Tag('BotCommandScopeDefault')        ],
+            pydantic.Tag('BotCommandScopeDefault')
+        ],
         typing.Annotated[
             types.BotCommandScopePeer,
-            pydantic.Tag('BotCommandScopePeer')        ],
+            pydantic.Tag('BotCommandScopePeer')
+        ],
         typing.Annotated[
             types.BotCommandScopePeerAdmins,
-            pydantic.Tag('BotCommandScopePeerAdmins')        ],
+            pydantic.Tag('BotCommandScopePeerAdmins')
+        ],
         typing.Annotated[
             types.BotCommandScopePeerUser,
-            pydantic.Tag('BotCommandScopePeerUser')        ],
+            pydantic.Tag('BotCommandScopePeerUser')
+        ],
         typing.Annotated[
             types.BotCommandScopeUsers,
-            pydantic.Tag('BotCommandScopeUsers')        ]
+            pydantic.Tag('BotCommandScopeUsers')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

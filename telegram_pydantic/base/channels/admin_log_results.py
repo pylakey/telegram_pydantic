@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AdminLogResults = typing.Union[
     typing.Annotated[
-            types.channels.AdminLogResults,
-            pydantic.Tag('channels.AdminLogResults'),
-            pydantic.Tag('AdminLogResults')
-        ]
+        types.channels.AdminLogResults,
+        pydantic.Tag('channels.AdminLogResults'),
+        pydantic.Tag('AdminLogResults')
+    ]
 ]

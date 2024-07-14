@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StatsGroupTopAdmin = typing.Union[
     typing.Annotated[
-            types.StatsGroupTopAdmin,
-            pydantic.Tag('StatsGroupTopAdmin')        ]
+        types.StatsGroupTopAdmin,
+        pydantic.Tag('StatsGroupTopAdmin')
+    ]
 ]

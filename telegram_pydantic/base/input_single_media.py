@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InputSingleMedia = typing.Union[
     typing.Annotated[
-            types.InputSingleMedia,
-            pydantic.Tag('InputSingleMedia')        ]
+        types.InputSingleMedia,
+        pydantic.Tag('InputSingleMedia')
+    ]
 ]

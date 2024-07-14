@@ -12,16 +12,20 @@ InputBotInlineResult = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputBotInlineResult,
-            pydantic.Tag('InputBotInlineResult')        ],
+            pydantic.Tag('InputBotInlineResult')
+        ],
         typing.Annotated[
             types.InputBotInlineResultDocument,
-            pydantic.Tag('InputBotInlineResultDocument')        ],
+            pydantic.Tag('InputBotInlineResultDocument')
+        ],
         typing.Annotated[
             types.InputBotInlineResultGame,
-            pydantic.Tag('InputBotInlineResultGame')        ],
+            pydantic.Tag('InputBotInlineResultGame')
+        ],
         typing.Annotated[
             types.InputBotInlineResultPhoto,
-            pydantic.Tag('InputBotInlineResultPhoto')        ]
+            pydantic.Tag('InputBotInlineResultPhoto')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

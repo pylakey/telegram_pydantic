@@ -12,13 +12,16 @@ InputChatPhoto = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputChatPhoto,
-            pydantic.Tag('InputChatPhoto')        ],
+            pydantic.Tag('InputChatPhoto')
+        ],
         typing.Annotated[
             types.InputChatPhotoEmpty,
-            pydantic.Tag('InputChatPhotoEmpty')        ],
+            pydantic.Tag('InputChatPhotoEmpty')
+        ],
         typing.Annotated[
             types.InputChatUploadedPhoto,
-            pydantic.Tag('InputChatUploadedPhoto')        ]
+            pydantic.Tag('InputChatUploadedPhoto')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

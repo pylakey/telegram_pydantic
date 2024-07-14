@@ -12,28 +12,36 @@ ChannelParticipantsFilter = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChannelParticipantsAdmins,
-            pydantic.Tag('ChannelParticipantsAdmins')        ],
+            pydantic.Tag('ChannelParticipantsAdmins')
+        ],
         typing.Annotated[
             types.ChannelParticipantsBanned,
-            pydantic.Tag('ChannelParticipantsBanned')        ],
+            pydantic.Tag('ChannelParticipantsBanned')
+        ],
         typing.Annotated[
             types.ChannelParticipantsBots,
-            pydantic.Tag('ChannelParticipantsBots')        ],
+            pydantic.Tag('ChannelParticipantsBots')
+        ],
         typing.Annotated[
             types.ChannelParticipantsContacts,
-            pydantic.Tag('ChannelParticipantsContacts')        ],
+            pydantic.Tag('ChannelParticipantsContacts')
+        ],
         typing.Annotated[
             types.ChannelParticipantsKicked,
-            pydantic.Tag('ChannelParticipantsKicked')        ],
+            pydantic.Tag('ChannelParticipantsKicked')
+        ],
         typing.Annotated[
             types.ChannelParticipantsMentions,
-            pydantic.Tag('ChannelParticipantsMentions')        ],
+            pydantic.Tag('ChannelParticipantsMentions')
+        ],
         typing.Annotated[
             types.ChannelParticipantsRecent,
-            pydantic.Tag('ChannelParticipantsRecent')        ],
+            pydantic.Tag('ChannelParticipantsRecent')
+        ],
         typing.Annotated[
             types.ChannelParticipantsSearch,
-            pydantic.Tag('ChannelParticipantsSearch')        ]
+            pydantic.Tag('ChannelParticipantsSearch')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

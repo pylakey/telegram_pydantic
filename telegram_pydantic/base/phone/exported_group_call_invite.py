@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ExportedGroupCallInvite = typing.Union[
     typing.Annotated[
-            types.phone.ExportedGroupCallInvite,
-            pydantic.Tag('phone.ExportedGroupCallInvite'),
-            pydantic.Tag('ExportedGroupCallInvite')
-        ]
+        types.phone.ExportedGroupCallInvite,
+        pydantic.Tag('phone.ExportedGroupCallInvite'),
+        pydantic.Tag('ExportedGroupCallInvite')
+    ]
 ]

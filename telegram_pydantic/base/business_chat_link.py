@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BusinessChatLink = typing.Union[
     typing.Annotated[
-            types.BusinessChatLink,
-            pydantic.Tag('BusinessChatLink')        ]
+        types.BusinessChatLink,
+        pydantic.Tag('BusinessChatLink')
+    ]
 ]

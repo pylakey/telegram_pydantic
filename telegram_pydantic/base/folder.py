@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Folder = typing.Union[
     typing.Annotated[
-            types.Folder,
-            pydantic.Tag('Folder')        ]
+        types.Folder,
+        pydantic.Tag('Folder')
+    ]
 ]

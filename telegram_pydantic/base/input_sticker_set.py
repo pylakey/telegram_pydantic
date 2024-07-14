@@ -12,37 +12,48 @@ InputStickerSet = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputStickerSetAnimatedEmoji,
-            pydantic.Tag('InputStickerSetAnimatedEmoji')        ],
+            pydantic.Tag('InputStickerSetAnimatedEmoji')
+        ],
         typing.Annotated[
             types.InputStickerSetAnimatedEmojiAnimations,
-            pydantic.Tag('InputStickerSetAnimatedEmojiAnimations')        ],
+            pydantic.Tag('InputStickerSetAnimatedEmojiAnimations')
+        ],
         typing.Annotated[
             types.InputStickerSetDice,
-            pydantic.Tag('InputStickerSetDice')        ],
+            pydantic.Tag('InputStickerSetDice')
+        ],
         typing.Annotated[
             types.InputStickerSetEmojiChannelDefaultStatuses,
-            pydantic.Tag('InputStickerSetEmojiChannelDefaultStatuses')        ],
+            pydantic.Tag('InputStickerSetEmojiChannelDefaultStatuses')
+        ],
         typing.Annotated[
             types.InputStickerSetEmojiDefaultStatuses,
-            pydantic.Tag('InputStickerSetEmojiDefaultStatuses')        ],
+            pydantic.Tag('InputStickerSetEmojiDefaultStatuses')
+        ],
         typing.Annotated[
             types.InputStickerSetEmojiDefaultTopicIcons,
-            pydantic.Tag('InputStickerSetEmojiDefaultTopicIcons')        ],
+            pydantic.Tag('InputStickerSetEmojiDefaultTopicIcons')
+        ],
         typing.Annotated[
             types.InputStickerSetEmojiGenericAnimations,
-            pydantic.Tag('InputStickerSetEmojiGenericAnimations')        ],
+            pydantic.Tag('InputStickerSetEmojiGenericAnimations')
+        ],
         typing.Annotated[
             types.InputStickerSetEmpty,
-            pydantic.Tag('InputStickerSetEmpty')        ],
+            pydantic.Tag('InputStickerSetEmpty')
+        ],
         typing.Annotated[
             types.InputStickerSetID,
-            pydantic.Tag('InputStickerSetID')        ],
+            pydantic.Tag('InputStickerSetID')
+        ],
         typing.Annotated[
             types.InputStickerSetPremiumGifts,
-            pydantic.Tag('InputStickerSetPremiumGifts')        ],
+            pydantic.Tag('InputStickerSetPremiumGifts')
+        ],
         typing.Annotated[
             types.InputStickerSetShortName,
-            pydantic.Tag('InputStickerSetShortName')        ]
+            pydantic.Tag('InputStickerSetShortName')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

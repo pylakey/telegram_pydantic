@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StatsGroupTopPoster = typing.Union[
     typing.Annotated[
-            types.StatsGroupTopPoster,
-            pydantic.Tag('StatsGroupTopPoster')        ]
+        types.StatsGroupTopPoster,
+        pydantic.Tag('StatsGroupTopPoster')
+    ]
 ]

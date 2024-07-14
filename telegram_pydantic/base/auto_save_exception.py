@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AutoSaveException = typing.Union[
     typing.Annotated[
-            types.AutoSaveException,
-            pydantic.Tag('AutoSaveException')        ]
+        types.AutoSaveException,
+        pydantic.Tag('AutoSaveException')
+    ]
 ]

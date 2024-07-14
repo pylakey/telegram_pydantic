@@ -12,13 +12,16 @@ BroadcastRevenueTransaction = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.BroadcastRevenueTransactionProceeds,
-            pydantic.Tag('BroadcastRevenueTransactionProceeds')        ],
+            pydantic.Tag('BroadcastRevenueTransactionProceeds')
+        ],
         typing.Annotated[
             types.BroadcastRevenueTransactionRefund,
-            pydantic.Tag('BroadcastRevenueTransactionRefund')        ],
+            pydantic.Tag('BroadcastRevenueTransactionRefund')
+        ],
         typing.Annotated[
             types.BroadcastRevenueTransactionWithdrawal,
-            pydantic.Tag('BroadcastRevenueTransactionWithdrawal')        ]
+            pydantic.Tag('BroadcastRevenueTransactionWithdrawal')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

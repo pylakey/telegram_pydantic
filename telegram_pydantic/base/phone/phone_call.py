@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PhoneCall = typing.Union[
     typing.Annotated[
-            types.phone.PhoneCall,
-            pydantic.Tag('phone.PhoneCall'),
-            pydantic.Tag('PhoneCall')
-        ]
+        types.phone.PhoneCall,
+        pydantic.Tag('phone.PhoneCall'),
+        pydantic.Tag('PhoneCall')
+    ]
 ]

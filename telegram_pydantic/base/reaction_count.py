@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ReactionCount = typing.Union[
     typing.Annotated[
-            types.ReactionCount,
-            pydantic.Tag('ReactionCount')        ]
+        types.ReactionCount,
+        pydantic.Tag('ReactionCount')
+    ]
 ]

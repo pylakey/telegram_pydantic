@@ -12,13 +12,16 @@ Reaction = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ReactionCustomEmoji,
-            pydantic.Tag('ReactionCustomEmoji')        ],
+            pydantic.Tag('ReactionCustomEmoji')
+        ],
         typing.Annotated[
             types.ReactionEmoji,
-            pydantic.Tag('ReactionEmoji')        ],
+            pydantic.Tag('ReactionEmoji')
+        ],
         typing.Annotated[
             types.ReactionEmpty,
-            pydantic.Tag('ReactionEmpty')        ]
+            pydantic.Tag('ReactionEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

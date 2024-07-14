@@ -12,10 +12,12 @@ GeoPoint = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.GeoPoint,
-            pydantic.Tag('GeoPoint')        ],
+            pydantic.Tag('GeoPoint')
+        ],
         typing.Annotated[
             types.GeoPointEmpty,
-            pydantic.Tag('GeoPointEmpty')        ]
+            pydantic.Tag('GeoPointEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

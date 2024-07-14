@@ -12,13 +12,16 @@ WebPageAttribute = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.WebPageAttributeStickerSet,
-            pydantic.Tag('WebPageAttributeStickerSet')        ],
+            pydantic.Tag('WebPageAttributeStickerSet')
+        ],
         typing.Annotated[
             types.WebPageAttributeStory,
-            pydantic.Tag('WebPageAttributeStory')        ],
+            pydantic.Tag('WebPageAttributeStory')
+        ],
         typing.Annotated[
             types.WebPageAttributeTheme,
-            pydantic.Tag('WebPageAttributeTheme')        ]
+            pydantic.Tag('WebPageAttributeTheme')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

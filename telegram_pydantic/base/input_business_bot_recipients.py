@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InputBusinessBotRecipients = typing.Union[
     typing.Annotated[
-            types.InputBusinessBotRecipients,
-            pydantic.Tag('InputBusinessBotRecipients')        ]
+        types.InputBusinessBotRecipients,
+        pydantic.Tag('InputBusinessBotRecipients')
+    ]
 ]

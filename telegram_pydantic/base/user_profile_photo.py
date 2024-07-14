@@ -12,10 +12,12 @@ UserProfilePhoto = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.UserProfilePhoto,
-            pydantic.Tag('UserProfilePhoto')        ],
+            pydantic.Tag('UserProfilePhoto')
+        ],
         typing.Annotated[
             types.UserProfilePhotoEmpty,
-            pydantic.Tag('UserProfilePhotoEmpty')        ]
+            pydantic.Tag('UserProfilePhotoEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

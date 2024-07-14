@@ -12,13 +12,16 @@ ChatReactions = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChatReactionsAll,
-            pydantic.Tag('ChatReactionsAll')        ],
+            pydantic.Tag('ChatReactionsAll')
+        ],
         typing.Annotated[
             types.ChatReactionsNone,
-            pydantic.Tag('ChatReactionsNone')        ],
+            pydantic.Tag('ChatReactionsNone')
+        ],
         typing.Annotated[
             types.ChatReactionsSome,
-            pydantic.Tag('ChatReactionsSome')        ]
+            pydantic.Tag('ChatReactionsSome')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

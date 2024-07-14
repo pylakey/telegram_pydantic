@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PeerBlocked = typing.Union[
     typing.Annotated[
-            types.PeerBlocked,
-            pydantic.Tag('PeerBlocked')        ]
+        types.PeerBlocked,
+        pydantic.Tag('PeerBlocked')
+    ]
 ]

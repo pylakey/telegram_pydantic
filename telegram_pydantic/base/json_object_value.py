@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 JSONObjectValue = typing.Union[
     typing.Annotated[
-            types.JsonObjectValue,
-            pydantic.Tag('JsonObjectValue')        ]
+        types.JsonObjectValue,
+        pydantic.Tag('JsonObjectValue')
+    ]
 ]

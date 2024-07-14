@@ -12,34 +12,44 @@ InputFileLocation = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputDocumentFileLocation,
-            pydantic.Tag('InputDocumentFileLocation')        ],
+            pydantic.Tag('InputDocumentFileLocation')
+        ],
         typing.Annotated[
             types.InputEncryptedFileLocation,
-            pydantic.Tag('InputEncryptedFileLocation')        ],
+            pydantic.Tag('InputEncryptedFileLocation')
+        ],
         typing.Annotated[
             types.InputFileLocation,
-            pydantic.Tag('InputFileLocation')        ],
+            pydantic.Tag('InputFileLocation')
+        ],
         typing.Annotated[
             types.InputGroupCallStream,
-            pydantic.Tag('InputGroupCallStream')        ],
+            pydantic.Tag('InputGroupCallStream')
+        ],
         typing.Annotated[
             types.InputPeerPhotoFileLocation,
-            pydantic.Tag('InputPeerPhotoFileLocation')        ],
+            pydantic.Tag('InputPeerPhotoFileLocation')
+        ],
         typing.Annotated[
             types.InputPhotoFileLocation,
-            pydantic.Tag('InputPhotoFileLocation')        ],
+            pydantic.Tag('InputPhotoFileLocation')
+        ],
         typing.Annotated[
             types.InputPhotoLegacyFileLocation,
-            pydantic.Tag('InputPhotoLegacyFileLocation')        ],
+            pydantic.Tag('InputPhotoLegacyFileLocation')
+        ],
         typing.Annotated[
             types.InputSecureFileLocation,
-            pydantic.Tag('InputSecureFileLocation')        ],
+            pydantic.Tag('InputSecureFileLocation')
+        ],
         typing.Annotated[
             types.InputStickerSetThumb,
-            pydantic.Tag('InputStickerSetThumb')        ],
+            pydantic.Tag('InputStickerSetThumb')
+        ],
         typing.Annotated[
             types.InputTakeoutFileLocation,
-            pydantic.Tag('InputTakeoutFileLocation')        ]
+            pydantic.Tag('InputTakeoutFileLocation')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 GroupCall = typing.Union[
     typing.Annotated[
-            types.phone.GroupCall,
-            pydantic.Tag('phone.GroupCall'),
-            pydantic.Tag('GroupCall')
-        ]
+        types.phone.GroupCall,
+        pydantic.Tag('phone.GroupCall'),
+        pydantic.Tag('GroupCall')
+    ]
 ]

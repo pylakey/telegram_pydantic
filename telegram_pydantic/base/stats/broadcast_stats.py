@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BroadcastStats = typing.Union[
     typing.Annotated[
-            types.stats.BroadcastStats,
-            pydantic.Tag('stats.BroadcastStats'),
-            pydantic.Tag('BroadcastStats')
-        ]
+        types.stats.BroadcastStats,
+        pydantic.Tag('stats.BroadcastStats'),
+        pydantic.Tag('BroadcastStats')
+    ]
 ]

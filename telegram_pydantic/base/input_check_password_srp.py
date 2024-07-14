@@ -12,10 +12,12 @@ InputCheckPasswordSRP = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputCheckPasswordEmpty,
-            pydantic.Tag('InputCheckPasswordEmpty')        ],
+            pydantic.Tag('InputCheckPasswordEmpty')
+        ],
         typing.Annotated[
             types.InputCheckPasswordSRP,
-            pydantic.Tag('InputCheckPasswordSRP')        ]
+            pydantic.Tag('InputCheckPasswordSRP')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

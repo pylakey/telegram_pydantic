@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PrepaidGiveaway = typing.Union[
     typing.Annotated[
-            types.PrepaidGiveaway,
-            pydantic.Tag('PrepaidGiveaway')        ]
+        types.PrepaidGiveaway,
+        pydantic.Tag('PrepaidGiveaway')
+    ]
 ]

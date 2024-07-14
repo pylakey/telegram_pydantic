@@ -12,19 +12,24 @@ NotifyPeer = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.NotifyBroadcasts,
-            pydantic.Tag('NotifyBroadcasts')        ],
+            pydantic.Tag('NotifyBroadcasts')
+        ],
         typing.Annotated[
             types.NotifyChats,
-            pydantic.Tag('NotifyChats')        ],
+            pydantic.Tag('NotifyChats')
+        ],
         typing.Annotated[
             types.NotifyForumTopic,
-            pydantic.Tag('NotifyForumTopic')        ],
+            pydantic.Tag('NotifyForumTopic')
+        ],
         typing.Annotated[
             types.NotifyPeer,
-            pydantic.Tag('NotifyPeer')        ],
+            pydantic.Tag('NotifyPeer')
+        ],
         typing.Annotated[
             types.NotifyUsers,
-            pydantic.Tag('NotifyUsers')        ]
+            pydantic.Tag('NotifyUsers')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

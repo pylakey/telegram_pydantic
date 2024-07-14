@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 InvitedUsers = typing.Union[
     typing.Annotated[
-            types.messages.InvitedUsers,
-            pydantic.Tag('messages.InvitedUsers'),
-            pydantic.Tag('InvitedUsers')
-        ]
+        types.messages.InvitedUsers,
+        pydantic.Tag('messages.InvitedUsers'),
+        pydantic.Tag('InvitedUsers')
+    ]
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SponsoredMessageReportOption = typing.Union[
     typing.Annotated[
-            types.SponsoredMessageReportOption,
-            pydantic.Tag('SponsoredMessageReportOption')        ]
+        types.SponsoredMessageReportOption,
+        pydantic.Tag('SponsoredMessageReportOption')
+    ]
 ]

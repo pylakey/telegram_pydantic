@@ -12,16 +12,20 @@ ReplyMarkup = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ReplyInlineMarkup,
-            pydantic.Tag('ReplyInlineMarkup')        ],
+            pydantic.Tag('ReplyInlineMarkup')
+        ],
         typing.Annotated[
             types.ReplyKeyboardForceReply,
-            pydantic.Tag('ReplyKeyboardForceReply')        ],
+            pydantic.Tag('ReplyKeyboardForceReply')
+        ],
         typing.Annotated[
             types.ReplyKeyboardHide,
-            pydantic.Tag('ReplyKeyboardHide')        ],
+            pydantic.Tag('ReplyKeyboardHide')
+        ],
         typing.Annotated[
             types.ReplyKeyboardMarkup,
-            pydantic.Tag('ReplyKeyboardMarkup')        ]
+            pydantic.Tag('ReplyKeyboardMarkup')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

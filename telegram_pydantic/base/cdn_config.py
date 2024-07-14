@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 CdnConfig = typing.Union[
     typing.Annotated[
-            types.CdnConfig,
-            pydantic.Tag('CdnConfig')        ]
+        types.CdnConfig,
+        pydantic.Tag('CdnConfig')
+    ]
 ]

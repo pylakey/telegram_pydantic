@@ -12,13 +12,16 @@ Peer = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PeerChannel,
-            pydantic.Tag('PeerChannel')        ],
+            pydantic.Tag('PeerChannel')
+        ],
         typing.Annotated[
             types.PeerChat,
-            pydantic.Tag('PeerChat')        ],
+            pydantic.Tag('PeerChat')
+        ],
         typing.Annotated[
             types.PeerUser,
-            pydantic.Tag('PeerUser')        ]
+            pydantic.Tag('PeerUser')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

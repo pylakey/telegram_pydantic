@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 FileHash = typing.Union[
     typing.Annotated[
-            types.FileHash,
-            pydantic.Tag('FileHash')        ]
+        types.FileHash,
+        pydantic.Tag('FileHash')
+    ]
 ]

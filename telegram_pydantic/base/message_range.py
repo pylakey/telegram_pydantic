@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MessageRange = typing.Union[
     typing.Annotated[
-            types.MessageRange,
-            pydantic.Tag('MessageRange')        ]
+        types.MessageRange,
+        pydantic.Tag('MessageRange')
+    ]
 ]

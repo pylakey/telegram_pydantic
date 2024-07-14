@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AutoSaveSettings = typing.Union[
     typing.Annotated[
-            types.account.AutoSaveSettings,
-            pydantic.Tag('account.AutoSaveSettings'),
-            pydantic.Tag('AutoSaveSettings')
-        ]
+        types.account.AutoSaveSettings,
+        pydantic.Tag('account.AutoSaveSettings'),
+        pydantic.Tag('AutoSaveSettings')
+    ]
 ]

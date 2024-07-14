@@ -12,19 +12,24 @@ InputNotifyPeer = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputNotifyBroadcasts,
-            pydantic.Tag('InputNotifyBroadcasts')        ],
+            pydantic.Tag('InputNotifyBroadcasts')
+        ],
         typing.Annotated[
             types.InputNotifyChats,
-            pydantic.Tag('InputNotifyChats')        ],
+            pydantic.Tag('InputNotifyChats')
+        ],
         typing.Annotated[
             types.InputNotifyForumTopic,
-            pydantic.Tag('InputNotifyForumTopic')        ],
+            pydantic.Tag('InputNotifyForumTopic')
+        ],
         typing.Annotated[
             types.InputNotifyPeer,
-            pydantic.Tag('InputNotifyPeer')        ],
+            pydantic.Tag('InputNotifyPeer')
+        ],
         typing.Annotated[
             types.InputNotifyUsers,
-            pydantic.Tag('InputNotifyUsers')        ]
+            pydantic.Tag('InputNotifyUsers')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

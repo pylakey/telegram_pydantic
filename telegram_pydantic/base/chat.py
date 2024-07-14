@@ -12,19 +12,24 @@ Chat = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.Channel,
-            pydantic.Tag('Channel')        ],
+            pydantic.Tag('Channel')
+        ],
         typing.Annotated[
             types.ChannelForbidden,
-            pydantic.Tag('ChannelForbidden')        ],
+            pydantic.Tag('ChannelForbidden')
+        ],
         typing.Annotated[
             types.Chat,
-            pydantic.Tag('Chat')        ],
+            pydantic.Tag('Chat')
+        ],
         typing.Annotated[
             types.ChatEmpty,
-            pydantic.Tag('ChatEmpty')        ],
+            pydantic.Tag('ChatEmpty')
+        ],
         typing.Annotated[
             types.ChatForbidden,
-            pydantic.Tag('ChatForbidden')        ]
+            pydantic.Tag('ChatForbidden')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

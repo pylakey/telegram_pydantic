@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 DataJSON = typing.Union[
     typing.Annotated[
-            types.DataJSON,
-            pydantic.Tag('DataJSON')        ]
+        types.DataJSON,
+        pydantic.Tag('DataJSON')
+    ]
 ]

@@ -12,16 +12,20 @@ WebPage = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.WebPage,
-            pydantic.Tag('WebPage')        ],
+            pydantic.Tag('WebPage')
+        ],
         typing.Annotated[
             types.WebPageEmpty,
-            pydantic.Tag('WebPageEmpty')        ],
+            pydantic.Tag('WebPageEmpty')
+        ],
         typing.Annotated[
             types.WebPageNotModified,
-            pydantic.Tag('WebPageNotModified')        ],
+            pydantic.Tag('WebPageNotModified')
+        ],
         typing.Annotated[
             types.WebPagePending,
-            pydantic.Tag('WebPagePending')        ]
+            pydantic.Tag('WebPagePending')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

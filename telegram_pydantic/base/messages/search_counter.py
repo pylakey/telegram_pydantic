@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SearchCounter = typing.Union[
     typing.Annotated[
-            types.messages.SearchCounter,
-            pydantic.Tag('messages.SearchCounter'),
-            pydantic.Tag('SearchCounter')
-        ]
+        types.messages.SearchCounter,
+        pydantic.Tag('messages.SearchCounter'),
+        pydantic.Tag('SearchCounter')
+    ]
 ]

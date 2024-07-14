@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ThemeSettings = typing.Union[
     typing.Annotated[
-            types.ThemeSettings,
-            pydantic.Tag('ThemeSettings')        ]
+        types.ThemeSettings,
+        pydantic.Tag('ThemeSettings')
+    ]
 ]

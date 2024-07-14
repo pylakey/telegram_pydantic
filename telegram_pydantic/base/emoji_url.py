@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 EmojiURL = typing.Union[
     typing.Annotated[
-            types.EmojiURL,
-            pydantic.Tag('EmojiURL')        ]
+        types.EmojiURL,
+        pydantic.Tag('EmojiURL')
+    ]
 ]

@@ -12,10 +12,12 @@ BotApp = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.BotApp,
-            pydantic.Tag('BotApp')        ],
+            pydantic.Tag('BotApp')
+        ],
         typing.Annotated[
             types.BotAppNotModified,
-            pydantic.Tag('BotAppNotModified')        ]
+            pydantic.Tag('BotAppNotModified')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

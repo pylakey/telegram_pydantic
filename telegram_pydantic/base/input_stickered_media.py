@@ -12,10 +12,12 @@ InputStickeredMedia = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputStickeredMediaDocument,
-            pydantic.Tag('InputStickeredMediaDocument')        ],
+            pydantic.Tag('InputStickeredMediaDocument')
+        ],
         typing.Annotated[
             types.InputStickeredMediaPhoto,
-            pydantic.Tag('InputStickeredMediaPhoto')        ]
+            pydantic.Tag('InputStickeredMediaPhoto')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

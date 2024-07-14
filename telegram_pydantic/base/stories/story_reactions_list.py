@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 StoryReactionsList = typing.Union[
     typing.Annotated[
-            types.stories.StoryReactionsList,
-            pydantic.Tag('stories.StoryReactionsList'),
-            pydantic.Tag('StoryReactionsList')
-        ]
+        types.stories.StoryReactionsList,
+        pydantic.Tag('stories.StoryReactionsList'),
+        pydantic.Tag('StoryReactionsList')
+    ]
 ]

@@ -12,43 +12,56 @@ SecureValueType = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.SecureValueTypeAddress,
-            pydantic.Tag('SecureValueTypeAddress')        ],
+            pydantic.Tag('SecureValueTypeAddress')
+        ],
         typing.Annotated[
             types.SecureValueTypeBankStatement,
-            pydantic.Tag('SecureValueTypeBankStatement')        ],
+            pydantic.Tag('SecureValueTypeBankStatement')
+        ],
         typing.Annotated[
             types.SecureValueTypeDriverLicense,
-            pydantic.Tag('SecureValueTypeDriverLicense')        ],
+            pydantic.Tag('SecureValueTypeDriverLicense')
+        ],
         typing.Annotated[
             types.SecureValueTypeEmail,
-            pydantic.Tag('SecureValueTypeEmail')        ],
+            pydantic.Tag('SecureValueTypeEmail')
+        ],
         typing.Annotated[
             types.SecureValueTypeIdentityCard,
-            pydantic.Tag('SecureValueTypeIdentityCard')        ],
+            pydantic.Tag('SecureValueTypeIdentityCard')
+        ],
         typing.Annotated[
             types.SecureValueTypeInternalPassport,
-            pydantic.Tag('SecureValueTypeInternalPassport')        ],
+            pydantic.Tag('SecureValueTypeInternalPassport')
+        ],
         typing.Annotated[
             types.SecureValueTypePassport,
-            pydantic.Tag('SecureValueTypePassport')        ],
+            pydantic.Tag('SecureValueTypePassport')
+        ],
         typing.Annotated[
             types.SecureValueTypePassportRegistration,
-            pydantic.Tag('SecureValueTypePassportRegistration')        ],
+            pydantic.Tag('SecureValueTypePassportRegistration')
+        ],
         typing.Annotated[
             types.SecureValueTypePersonalDetails,
-            pydantic.Tag('SecureValueTypePersonalDetails')        ],
+            pydantic.Tag('SecureValueTypePersonalDetails')
+        ],
         typing.Annotated[
             types.SecureValueTypePhone,
-            pydantic.Tag('SecureValueTypePhone')        ],
+            pydantic.Tag('SecureValueTypePhone')
+        ],
         typing.Annotated[
             types.SecureValueTypeRentalAgreement,
-            pydantic.Tag('SecureValueTypeRentalAgreement')        ],
+            pydantic.Tag('SecureValueTypeRentalAgreement')
+        ],
         typing.Annotated[
             types.SecureValueTypeTemporaryRegistration,
-            pydantic.Tag('SecureValueTypeTemporaryRegistration')        ],
+            pydantic.Tag('SecureValueTypeTemporaryRegistration')
+        ],
         typing.Annotated[
             types.SecureValueTypeUtilityBill,
-            pydantic.Tag('SecureValueTypeUtilityBill')        ]
+            pydantic.Tag('SecureValueTypeUtilityBill')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

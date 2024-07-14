@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 CheckedGiftCode = typing.Union[
     typing.Annotated[
-            types.payments.CheckedGiftCode,
-            pydantic.Tag('payments.CheckedGiftCode'),
-            pydantic.Tag('CheckedGiftCode')
-        ]
+        types.payments.CheckedGiftCode,
+        pydantic.Tag('payments.CheckedGiftCode'),
+        pydantic.Tag('CheckedGiftCode')
+    ]
 ]

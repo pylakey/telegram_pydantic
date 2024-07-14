@@ -12,10 +12,12 @@ ForumTopic = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ForumTopic,
-            pydantic.Tag('ForumTopic')        ],
+            pydantic.Tag('ForumTopic')
+        ],
         typing.Annotated[
             types.ForumTopicDeleted,
-            pydantic.Tag('ForumTopicDeleted')        ]
+            pydantic.Tag('ForumTopicDeleted')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -12,13 +12,16 @@ MessagePeerVote = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.MessagePeerVote,
-            pydantic.Tag('MessagePeerVote')        ],
+            pydantic.Tag('MessagePeerVote')
+        ],
         typing.Annotated[
             types.MessagePeerVoteInputOption,
-            pydantic.Tag('MessagePeerVoteInputOption')        ],
+            pydantic.Tag('MessagePeerVoteInputOption')
+        ],
         typing.Annotated[
             types.MessagePeerVoteMultiple,
-            pydantic.Tag('MessagePeerVoteMultiple')        ]
+            pydantic.Tag('MessagePeerVoteMultiple')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

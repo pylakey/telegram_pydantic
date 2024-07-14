@@ -12,10 +12,12 @@ ReactionNotificationsFrom = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ReactionNotificationsFromAll,
-            pydantic.Tag('ReactionNotificationsFromAll')        ],
+            pydantic.Tag('ReactionNotificationsFromAll')
+        ],
         typing.Annotated[
             types.ReactionNotificationsFromContacts,
-            pydantic.Tag('ReactionNotificationsFromContacts')        ]
+            pydantic.Tag('ReactionNotificationsFromContacts')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

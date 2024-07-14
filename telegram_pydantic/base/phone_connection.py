@@ -12,10 +12,12 @@ PhoneConnection = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.PhoneConnection,
-            pydantic.Tag('PhoneConnection')        ],
+            pydantic.Tag('PhoneConnection')
+        ],
         typing.Annotated[
             types.PhoneConnectionWebrtc,
-            pydantic.Tag('PhoneConnectionWebrtc')        ]
+            pydantic.Tag('PhoneConnectionWebrtc')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

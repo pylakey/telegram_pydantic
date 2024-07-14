@@ -12,22 +12,28 @@ UserStatus = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.UserStatusEmpty,
-            pydantic.Tag('UserStatusEmpty')        ],
+            pydantic.Tag('UserStatusEmpty')
+        ],
         typing.Annotated[
             types.UserStatusLastMonth,
-            pydantic.Tag('UserStatusLastMonth')        ],
+            pydantic.Tag('UserStatusLastMonth')
+        ],
         typing.Annotated[
             types.UserStatusLastWeek,
-            pydantic.Tag('UserStatusLastWeek')        ],
+            pydantic.Tag('UserStatusLastWeek')
+        ],
         typing.Annotated[
             types.UserStatusOffline,
-            pydantic.Tag('UserStatusOffline')        ],
+            pydantic.Tag('UserStatusOffline')
+        ],
         typing.Annotated[
             types.UserStatusOnline,
-            pydantic.Tag('UserStatusOnline')        ],
+            pydantic.Tag('UserStatusOnline')
+        ],
         typing.Annotated[
             types.UserStatusRecently,
-            pydantic.Tag('UserStatusRecently')        ]
+            pydantic.Tag('UserStatusRecently')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

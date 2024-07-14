@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 TermsOfService = typing.Union[
     typing.Annotated[
-            types.help.TermsOfService,
-            pydantic.Tag('help.TermsOfService'),
-            pydantic.Tag('TermsOfService')
-        ]
+        types.help.TermsOfService,
+        pydantic.Tag('help.TermsOfService'),
+        pydantic.Tag('TermsOfService')
+    ]
 ]

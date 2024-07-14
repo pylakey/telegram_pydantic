@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PeerStories = typing.Union[
     typing.Annotated[
-            types.stories.PeerStories,
-            pydantic.Tag('stories.PeerStories'),
-            pydantic.Tag('PeerStories')
-        ]
+        types.stories.PeerStories,
+        pydantic.Tag('stories.PeerStories'),
+        pydantic.Tag('PeerStories')
+    ]
 ]

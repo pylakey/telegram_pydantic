@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ForumTopics = typing.Union[
     typing.Annotated[
-            types.messages.ForumTopics,
-            pydantic.Tag('messages.ForumTopics'),
-            pydantic.Tag('ForumTopics')
-        ]
+        types.messages.ForumTopics,
+        pydantic.Tag('messages.ForumTopics'),
+        pydantic.Tag('ForumTopics')
+    ]
 ]

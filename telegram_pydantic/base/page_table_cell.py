@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PageTableCell = typing.Union[
     typing.Annotated[
-            types.PageTableCell,
-            pydantic.Tag('PageTableCell')        ]
+        types.PageTableCell,
+        pydantic.Tag('PageTableCell')
+    ]
 ]

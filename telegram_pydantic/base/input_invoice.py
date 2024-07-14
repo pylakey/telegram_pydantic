@@ -12,16 +12,20 @@ InputInvoice = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputInvoiceMessage,
-            pydantic.Tag('InputInvoiceMessage')        ],
+            pydantic.Tag('InputInvoiceMessage')
+        ],
         typing.Annotated[
             types.InputInvoicePremiumGiftCode,
-            pydantic.Tag('InputInvoicePremiumGiftCode')        ],
+            pydantic.Tag('InputInvoicePremiumGiftCode')
+        ],
         typing.Annotated[
             types.InputInvoiceSlug,
-            pydantic.Tag('InputInvoiceSlug')        ],
+            pydantic.Tag('InputInvoiceSlug')
+        ],
         typing.Annotated[
             types.InputInvoiceStars,
-            pydantic.Tag('InputInvoiceStars')        ]
+            pydantic.Tag('InputInvoiceStars')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

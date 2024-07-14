@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ResolvedPeer = typing.Union[
     typing.Annotated[
-            types.contacts.ResolvedPeer,
-            pydantic.Tag('contacts.ResolvedPeer'),
-            pydantic.Tag('ResolvedPeer')
-        ]
+        types.contacts.ResolvedPeer,
+        pydantic.Tag('contacts.ResolvedPeer'),
+        pydantic.Tag('ResolvedPeer')
+    ]
 ]

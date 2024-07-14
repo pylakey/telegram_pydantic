@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AuthorizationForm = typing.Union[
     typing.Annotated[
-            types.account.AuthorizationForm,
-            pydantic.Tag('account.AuthorizationForm'),
-            pydantic.Tag('AuthorizationForm')
-        ]
+        types.account.AuthorizationForm,
+        pydantic.Tag('account.AuthorizationForm'),
+        pydantic.Tag('AuthorizationForm')
+    ]
 ]

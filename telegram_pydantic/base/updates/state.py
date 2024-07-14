@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 State = typing.Union[
     typing.Annotated[
-            types.updates.State,
-            pydantic.Tag('updates.State'),
-            pydantic.Tag('State')
-        ]
+        types.updates.State,
+        pydantic.Tag('updates.State'),
+        pydantic.Tag('State')
+    ]
 ]

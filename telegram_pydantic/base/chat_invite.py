@@ -12,13 +12,16 @@ ChatInvite = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.ChatInvite,
-            pydantic.Tag('ChatInvite')        ],
+            pydantic.Tag('ChatInvite')
+        ],
         typing.Annotated[
             types.ChatInviteAlready,
-            pydantic.Tag('ChatInviteAlready')        ],
+            pydantic.Tag('ChatInviteAlready')
+        ],
         typing.Annotated[
             types.ChatInvitePeek,
-            pydantic.Tag('ChatInvitePeek')        ]
+            pydantic.Tag('ChatInvitePeek')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

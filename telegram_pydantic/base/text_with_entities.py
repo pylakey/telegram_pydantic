@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 TextWithEntities = typing.Union[
     typing.Annotated[
-            types.TextWithEntities,
-            pydantic.Tag('TextWithEntities')        ]
+        types.TextWithEntities,
+        pydantic.Tag('TextWithEntities')
+    ]
 ]

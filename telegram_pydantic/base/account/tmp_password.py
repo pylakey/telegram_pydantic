@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 TmpPassword = typing.Union[
     typing.Annotated[
-            types.account.TmpPassword,
-            pydantic.Tag('account.TmpPassword'),
-            pydantic.Tag('TmpPassword')
-        ]
+        types.account.TmpPassword,
+        pydantic.Tag('account.TmpPassword'),
+        pydantic.Tag('TmpPassword')
+    ]
 ]

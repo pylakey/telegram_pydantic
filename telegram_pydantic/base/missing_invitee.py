@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MissingInvitee = typing.Union[
     typing.Annotated[
-            types.MissingInvitee,
-            pydantic.Tag('MissingInvitee')        ]
+        types.MissingInvitee,
+        pydantic.Tag('MissingInvitee')
+    ]
 ]

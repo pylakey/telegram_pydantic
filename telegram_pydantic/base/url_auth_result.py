@@ -12,13 +12,16 @@ UrlAuthResult = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.UrlAuthResultAccepted,
-            pydantic.Tag('UrlAuthResultAccepted')        ],
+            pydantic.Tag('UrlAuthResultAccepted')
+        ],
         typing.Annotated[
             types.UrlAuthResultDefault,
-            pydantic.Tag('UrlAuthResultDefault')        ],
+            pydantic.Tag('UrlAuthResultDefault')
+        ],
         typing.Annotated[
             types.UrlAuthResultRequest,
-            pydantic.Tag('UrlAuthResultRequest')        ]
+            pydantic.Tag('UrlAuthResultRequest')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

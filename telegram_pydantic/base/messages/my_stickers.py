@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 MyStickers = typing.Union[
     typing.Annotated[
-            types.messages.MyStickers,
-            pydantic.Tag('messages.MyStickers'),
-            pydantic.Tag('MyStickers')
-        ]
+        types.messages.MyStickers,
+        pydantic.Tag('messages.MyStickers'),
+        pydantic.Tag('MyStickers')
+    ]
 ]

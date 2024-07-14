@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Error = typing.Union[
     typing.Annotated[
-            types.Error,
-            pydantic.Tag('Error')        ]
+        types.Error,
+        pydantic.Tag('Error')
+    ]
 ]

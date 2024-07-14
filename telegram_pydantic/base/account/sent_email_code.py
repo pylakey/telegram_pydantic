@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SentEmailCode = typing.Union[
     typing.Annotated[
-            types.account.SentEmailCode,
-            pydantic.Tag('account.SentEmailCode'),
-            pydantic.Tag('SentEmailCode')
-        ]
+        types.account.SentEmailCode,
+        pydantic.Tag('account.SentEmailCode'),
+        pydantic.Tag('SentEmailCode')
+    ]
 ]

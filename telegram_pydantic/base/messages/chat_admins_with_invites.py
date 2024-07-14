@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ChatAdminsWithInvites = typing.Union[
     typing.Annotated[
-            types.messages.ChatAdminsWithInvites,
-            pydantic.Tag('messages.ChatAdminsWithInvites'),
-            pydantic.Tag('ChatAdminsWithInvites')
-        ]
+        types.messages.ChatAdminsWithInvites,
+        pydantic.Tag('messages.ChatAdminsWithInvites'),
+        pydantic.Tag('ChatAdminsWithInvites')
+    ]
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 AttachMenuBotIconColor = typing.Union[
     typing.Annotated[
-            types.AttachMenuBotIconColor,
-            pydantic.Tag('AttachMenuBotIconColor')        ]
+        types.AttachMenuBotIconColor,
+        pydantic.Tag('AttachMenuBotIconColor')
+    ]
 ]

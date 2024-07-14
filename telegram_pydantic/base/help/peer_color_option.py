@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 PeerColorOption = typing.Union[
     typing.Annotated[
-            types.help.PeerColorOption,
-            pydantic.Tag('help.PeerColorOption'),
-            pydantic.Tag('PeerColorOption')
-        ]
+        types.help.PeerColorOption,
+        pydantic.Tag('help.PeerColorOption'),
+        pydantic.Tag('PeerColorOption')
+    ]
 ]

@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Status = typing.Union[
     typing.Annotated[
-            types.smsjobs.Status,
-            pydantic.Tag('smsjobs.Status'),
-            pydantic.Tag('Status')
-        ]
+        types.smsjobs.Status,
+        pydantic.Tag('smsjobs.Status'),
+        pydantic.Tag('Status')
+    ]
 ]

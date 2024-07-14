@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 GroupCallParticipant = typing.Union[
     typing.Annotated[
-            types.GroupCallParticipant,
-            pydantic.Tag('GroupCallParticipant')        ]
+        types.GroupCallParticipant,
+        pydantic.Tag('GroupCallParticipant')
+    ]
 ]

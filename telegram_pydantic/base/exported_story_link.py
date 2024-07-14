@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ExportedStoryLink = typing.Union[
     typing.Annotated[
-            types.ExportedStoryLink,
-            pydantic.Tag('ExportedStoryLink')        ]
+        types.ExportedStoryLink,
+        pydantic.Tag('ExportedStoryLink')
+    ]
 ]

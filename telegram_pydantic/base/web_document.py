@@ -12,10 +12,12 @@ WebDocument = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.WebDocument,
-            pydantic.Tag('WebDocument')        ],
+            pydantic.Tag('WebDocument')
+        ],
         typing.Annotated[
             types.WebDocumentNoProxy,
-            pydantic.Tag('WebDocumentNoProxy')        ]
+            pydantic.Tag('WebDocumentNoProxy')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 DefaultHistoryTTL = typing.Union[
     typing.Annotated[
-            types.DefaultHistoryTTL,
-            pydantic.Tag('DefaultHistoryTTL')        ]
+        types.DefaultHistoryTTL,
+        pydantic.Tag('DefaultHistoryTTL')
+    ]
 ]

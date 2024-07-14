@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 ChatlistUpdates = typing.Union[
     typing.Annotated[
-            types.chatlists.ChatlistUpdates,
-            pydantic.Tag('chatlists.ChatlistUpdates'),
-            pydantic.Tag('ChatlistUpdates')
-        ]
+        types.chatlists.ChatlistUpdates,
+        pydantic.Tag('chatlists.ChatlistUpdates'),
+        pydantic.Tag('ChatlistUpdates')
+    ]
 ]

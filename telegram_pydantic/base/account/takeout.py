@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 Takeout = typing.Union[
     typing.Annotated[
-            types.account.Takeout,
-            pydantic.Tag('account.Takeout'),
-            pydantic.Tag('Takeout')
-        ]
+        types.account.Takeout,
+        pydantic.Tag('account.Takeout'),
+        pydantic.Tag('Takeout')
+    ]
 ]

@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 BotInfo = typing.Union[
     typing.Annotated[
-            types.BotInfo,
-            pydantic.Tag('BotInfo')        ]
+        types.BotInfo,
+        pydantic.Tag('BotInfo')
+    ]
 ]

@@ -12,10 +12,12 @@ InputGame = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.InputGameID,
-            pydantic.Tag('InputGameID')        ],
+            pydantic.Tag('InputGameID')
+        ],
         typing.Annotated[
             types.InputGameShortName,
-            pydantic.Tag('InputGameShortName')        ]
+            pydantic.Tag('InputGameShortName')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

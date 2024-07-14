@@ -11,6 +11,7 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SavedDialog = typing.Union[
     typing.Annotated[
-            types.SavedDialog,
-            pydantic.Tag('SavedDialog')        ]
+        types.SavedDialog,
+        pydantic.Tag('SavedDialog')
+    ]
 ]

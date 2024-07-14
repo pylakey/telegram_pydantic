@@ -11,8 +11,8 @@ from telegram_pydantic import types
 # pydantic.Discriminator(base_type_discriminator)
 SupportName = typing.Union[
     typing.Annotated[
-            types.help.SupportName,
-            pydantic.Tag('help.SupportName'),
-            pydantic.Tag('SupportName')
-        ]
+        types.help.SupportName,
+        pydantic.Tag('help.SupportName'),
+        pydantic.Tag('SupportName')
+    ]
 ]

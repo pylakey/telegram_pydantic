@@ -12,13 +12,16 @@ BotMenuButton = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.BotMenuButton,
-            pydantic.Tag('BotMenuButton')        ],
+            pydantic.Tag('BotMenuButton')
+        ],
         typing.Annotated[
             types.BotMenuButtonCommands,
-            pydantic.Tag('BotMenuButtonCommands')        ],
+            pydantic.Tag('BotMenuButtonCommands')
+        ],
         typing.Annotated[
             types.BotMenuButtonDefault,
-            pydantic.Tag('BotMenuButtonDefault')        ]
+            pydantic.Tag('BotMenuButtonDefault')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]

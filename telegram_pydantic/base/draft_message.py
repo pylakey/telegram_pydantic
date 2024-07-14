@@ -12,10 +12,12 @@ DraftMessage = typing.Annotated[
     typing.Union[
         typing.Annotated[
             types.DraftMessage,
-            pydantic.Tag('DraftMessage')        ],
+            pydantic.Tag('DraftMessage')
+        ],
         typing.Annotated[
             types.DraftMessageEmpty,
-            pydantic.Tag('DraftMessageEmpty')        ]
+            pydantic.Tag('DraftMessageEmpty')
+        ]
     ],
     pydantic.Discriminator(base_type_discriminator)
 ]
